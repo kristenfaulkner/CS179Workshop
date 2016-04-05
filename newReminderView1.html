@@ -10,30 +10,39 @@
 	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </head>
 <body>
-<!--- My Kin page ------------------------------------------>
-<div data-role="page" id="myKin">
+<!--- addContact page ------------------------------------------>
+<div data-role="page" id="addContact">
 
 	<div data-role="header">
 		<!--Header -->
-		<h1>My Reminders</h1>
+		<h1>New Reminder</h1>
 	</div>
+
+	
 
 	<div data-role="content">
 		
-		<ul data-role="listview" data-inset="true">
-			<li><a href="#">Kristen</a></li>
-			<li><a href="#">Amelia</a></li>
-			<li><a href="#">Xingchi</a></li>
-			<li><a href="#">Joan</a></li>
-			<li><a href="#">Adam</a></li>
-			<li><a href="#">Sally</a></li>
-			<li><a href="#">Ofra</a></li>
-			<li><a href="#">Bernd</a></li>
-		</ul>
-		</div>
-	<!-- /content -->
+		<form method="post" action="createReminder.html">
+			<div class="fieldcontain">
+				<label for="fname">First Name</label>
+				<input type="text" name="fname" id="fname" value="" />
+			<div>
+			<div class="fieldcontain">
+				<label for="lname">Last Name</label>
+				<input type="text" name="lname" id="lname" value="" />
+			</div>
+			<div class="fieldcontain">
+				<label for="lname">Phone Number</label>
+				<input type="text" name="phoneNum" id="phoneNum" value="" />
+			</div>
+			</br>
+			<div class="fieldcontain">
+				<input type="submit" value="Next">
+			</div>
+		</form>
+		</br>
 
-	<div data-role="navbar" data-iconpos="top">
+		<div data-role="navbar" data-iconpos="top">
 			<ul>
 				<li><a href="myKin-Amelia.html" class="ui-btn" data-icon="user">My Reminders</a></li>
 				<li><a href="newReminderView1.html" class="ui-btn" data-icon="plus">Add Reminders</a></li>
@@ -41,8 +50,9 @@
 				<li><a href="#createReminder" class="ui-btn" data-icon="grid">Activity</a></li>
 			</ul>
 		</div>
-	</div>
-</div><!-- /myKinpage -->
+	</div><!-- /content -->
+
+</div><!-- /addContactpage -->
 
 </body>
 </html>
