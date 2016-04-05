@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Page Title</title>
+	<title>Send New Request</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -10,43 +10,40 @@
 	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </head>
 <body>
-<!--- sendRequest page ------------------------------------------>
+<!--- My Kin page ------------------------------------------>
 <div data-role="page" id="sendRequest">
 
 	<div data-role="header">
 		<!--Header -->
-		<h1>Send Request Page</h1>
+		<h1>Send New Request</h1>
 	</div>
 
 	<div data-role="content">
-		<!-- Navbar -->
-		<div data-role="navbar" data-iconpos="top">
-			<ul>
-				<li data-icon="home"><a href="#home" class="ui-btn">Home</a></li>
-				<li><a href="#social" class="ui-btn">Social</a></li>
-				<li><a href="#contacts" class="ui-btn">Contacts</a></li>
-				<li><a href="myKin-Amelia" class="ui-btn">myKin</a></li>
-				<li><a href="sendRequest-Kristen" class="ui-btn">sendRequest</a></li>
-				<li><a href="createReminder-Joan" class="ui-btn">createReminder</a></li>
-			</ul>
-		</div>
-		<p>Page content goes here.</p>
-		<div>Here
+
 		<ul data-role="listview" data-inset="true">
-			<li><a href="http://acura.com">Acura</a></li>
-			<li><a href="http://audi.com">Audi</a></li>
-			<li><a href="http://bmw.com">BMW</a></li>
+			<li><a href="mediaType">Kristen</a></li>
+			<li><a href="mediaType">Amelia</a></li>
+			<li><a href="mediaType">Xingchi</a></li>
+			<li><a href="mediaType">Joan</a></li>
+			<li><a href="mediaType">Adam</a></li>
+			<li><a href="mediaType">Sally</a></li>
 		</ul>
 		</div>
-		<br />
-		<a data-role="button" href="http://google.com">Google</a>
-		<button>Button</button>
-	</div><!-- /content -->
+	<!-- /content -->
 
+	<div data-role="navbar" data-iconpos="top">
+			<ul>
+				<li><a href="myKin-Amelia.html" class="ui-btn" data-icon="user">My Reminders</a></li>
+				<li><a href="#viewReminder" class="ui-btn" data-icon="plus">Add Reminders</a></li>
+				<li><a href="#sendRequest" class="ui-btn" data-icon="forward">Send Request</a></li>
+				<li><a href="#createReminder" class="ui-btn" data-icon="grid">Activity</a></li>
+			</ul>
+		</div>
+	</div>
 	<div data-role="footer" data-position="fixed">
 		<h4>Footer</h4>
 	</div><!-- /footer -->
-</div><!-- /sendRequestpage -->
+</div><!-- /myKinpage -->
 
 </body>
 </html>
