@@ -19,28 +19,33 @@
 	</div>
 
 	<div data-role="content">
-		<!-- Navbar -->
-		<div data-role="navbar" data-iconpos="top">
+
+	<a href="#popupBasic" class = "ui-btn" data-rel="popup">Open Popup</a>
+		
+	
+
+	<div data-role="popup" id="popupBasic" data-transition="fade" data-theme = "b" data-overlay-theme = "a">
+
+		<p>Time to send your mom a text!<p>
+		<input type="text" name="fname" placeholder="Miss you! Mom!"><br>
+		<a href="index.html" data-role="button" data-inline="true" data-mini="true">Send </a>
+		<a href="index.html" data-role="button" data-inline="true" data-theme="b" data-mini="true">Later</a>
+	</div>
+
+
+	<!-- Navbar -->
+	<div data-role="navbar" data-iconpos="top">
 			<ul>
-				<li data-icon="home"><a href="#home" class="ui-btn">Home</a></li>
-				<li><a href="#social" class="ui-btn">Social</a></li>
-				<li><a href="#contacts" class="ui-btn">Contacts</a></li>
-				<li><a href="myKin-Amelia" class="ui-btn">myKin</a></li>
-				<li><a href="sendRequest-Kristen" class="ui-btn">sendRequest</a></li>
-				<li><a href="createReminder-Joan" class="ui-btn">createReminder</a></li>
+				<li><a href="myKin-Amelia.html" class="ui-btn" data-icon="user">My Reminders</a></li>
+				<li><a href="#viewReminder" class="ui-btn" data-icon="plus">Add Reminders</a></li>
+				<li><a href="#sendRequest" class="ui-btn" data-icon="forward">Send Request</a></li>
+				<li><a href="#createReminder" class="ui-btn" data-icon="grid">Activity</a></li>
 			</ul>
 		</div>
-		<p>Page content goes here.</p>
-		<div>Here
-		<ul data-role="listview" data-inset="true">
-			<li><a href="http://acura.com">Acura</a></li>
-			<li><a href="http://audi.com">Audi</a></li>
-			<li><a href="http://bmw.com">BMW</a></li>
-		</ul>
 		</div>
-		<br />
-		<a data-role="button" href="http://google.com">Google</a>
-		<button>Button</button>
+
+
+
 	</div><!-- /content -->
 
 	<div data-role="footer" data-position="fixed">
