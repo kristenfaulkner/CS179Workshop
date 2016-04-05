@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page Title</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+<!--- Create Reminder page ------------------------------------------>
+<div data-role="page" id="myKin">
+
+	<div data-role="header">
+		<!--Header -->
+		<h1>Create Reminder</h1>
+	</div>
+
+	<div data-role="content">
+		
+	<form>
+
+        <fieldset data-role="controlgroup">
+        <legend>Vertical:</legend>
+        <input type="radio" name="radio-choice-v-2" id="radio-choice-v-2a" value="on" checked="checked">
+        <label for="radio-choice-v-2a">Once a day</label>
+        <input type="radio" name="radio-choice-v-2" id="radio-choice-v-2b" value="off">
+        <label for="radio-choice-v-2b">Once a week</label>
+        <input type="radio" name="radio-choice-v-2" id="radio-choice-v-2c" value="other">
+        <label for="radio-choice-v-2c">Once a month</label>
+
+
+    <fieldset data-role="controlgroup">
+        <legend>How often do you want to communicate?</legend>
+        <input type="checkbox" name="checkbox-v-2a" id="checkbox-v-2a">
+        <label for="checkbox-v-2a">Text</label>
+        <input type="checkbox" name="checkbox-v-2b" id="checkbox-v-2b">
+        <label for="checkbox-v-2b">Photo</label>
+        <input type="checkbox" name="checkbox-v-2c" id="checkbox-v-2c">
+        <label for="checkbox-v-2c">Music</label>
+    </fieldset>
+</form>
+		</div>
+	<!-- /content -->
+
+	<div data-role="navbar" data-iconpos="top">
+			<ul>
+				<li><a href="myKin-Amelia.html" class="ui-btn" data-icon="user">My Reminders</a></li>
+				<li><a href="#viewReminder" class="ui-btn" data-icon="plus">Add Reminders</a></li>
+				<li><a href="#sendRequest" class="ui-btn" data-icon="forward">Send Request</a></li>
+				<li><a href="#createReminder" class="ui-btn" data-icon="grid">Activity</a></li>
+			</ul>
+		</div>
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<h4>Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /Create Reminder page -->
+
+</body>
+</html>
