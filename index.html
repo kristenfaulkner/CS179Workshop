@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Page Title</title>
+	<title>krzysztof Home Page</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -15,7 +15,7 @@
 
 	<div data-role="header">
 		<!--Header -->
-		<h1>krzysztof Home Page</h1>
+		<h1>Index.html</h1>
 	</div>
 
 	<div data-role="content">
@@ -23,11 +23,10 @@
 		<div data-role="navbar" data-iconpos="top">
 			<ul>
 				<li data-icon="home"><a href="#home" class="ui-btn">Home</a></li>
-				<li><a href="#social" class="ui-btn">Social</a></li>
-				<li><a href="#contacts" class="ui-btn">Contacts</a></li>
-				<li><a href="myKin-Amelia" class="ui-btn">myKin</a></li>
-				<li><a href="sendRequest-Kristen" class="ui-btn">sendRequest</a></li>
-				<li><a href="createReminder-Joan" class="ui-btn">createReminder</a></li>
+				<li><a href="#viewReminder" class="ui-btn">Social</a></li>
+				<li><a href="#myKin" class="ui-btn">myKin</a></li>
+				<li><a href="#sendRequest" class="ui-btn">sendRequest</a></li>
+				<li><a href="#createReminder" class="ui-btn">createReminder</a></li>
 			</ul>
 		</div>
 		<p>Page content goes here.</p>
@@ -60,66 +59,95 @@
 	</div><!-- /footer -->
 </div><!-- /homepage -->
 
-<!-- Contacts Page -->
-<div data-role="page" id="contacts">
+<!--- View Reminder page ------------------------------------------>
+<div data-role="page" id="viewReminder">
 
 	<div data-role="header">
 		<!--Header -->
-		<h1>Contacts Page</h1>
+		<h1>Reminder Page</h1>
 	</div>
 
 	<div data-role="content">
 		<!-- Navbar -->
-		<div data-role="navbar">
+		<div data-role="navbar" data-iconpos="top">
 			<ul>
-				<li><a href="#home" class="ui-btn">Home</a></li>
-				<li><a href="#social" class="ui-btn">Social</a></li>
-				<li><a href="#contacts" class="ui-btn">Contacts</a></li>
+				<li data-icon="home"><a href="#home" class="ui-btn">Home</a></li>
+				<li><a href="#viewReminder" class="ui-btn">Social</a></li>
+				<li><a href="#myKin" class="ui-btn">myKin</a></li>
+				<li><a href="#sendRequest" class="ui-btn">sendRequest</a></li>
+				<li><a href="#createReminder" class="ui-btn">createReminder</a></li>
 			</ul>
 		</div>
+		<p>Page content goes here.</p>
+		<div>Here
 		<ul data-role="listview" data-inset="true">
 			<li><a href="http://acura.com">Acura</a></li>
 			<li><a href="http://audi.com">Audi</a></li>
 			<li><a href="http://bmw.com">BMW</a></li>
 		</ul>
+		</div>
 		<br />
+		<div class="ui-grid-b">
+				<div class="ui-block-a"><div class="ui-bar ui-bar-a" style="height:60px">Block A</div></div>
+				<div class="ui-block-b"><div class="ui-bar ui-bar-a" style="height:60px">Block B</div></div>
+				<div class="ui-block-c"><div class="ui-bar ui-bar-a" style="height:60px">Block C</div></div>
+				<div class="ui-block-a"><div class="ui-bar ui-bar-a" style="height:60px">Block A</div></div>
+				<div class="ui-block-b"><div class="ui-bar ui-bar-a" style="height:60px">Block B</div></div>
+				<div class="ui-block-c"><div class="ui-bar ui-bar-a" style="height:60px">Block C</div></div>
+				<div class="ui-block-a"><div class="ui-bar ui-bar-a" style="height:60px">Block A</div></div>
+				<div class="ui-block-b"><div class="ui-bar ui-bar-a" style="height:60px">Block B</div></div>
+				<div class="ui-block-c"><div class="ui-bar ui-bar-a" style="height:60px">Block C</div></div>
+		</div><!-- /grid-b -->
+
 		<a data-role="button" href="http://google.com">Google</a>
 		<button>Button</button>
-
 	</div><!-- /content -->
 
 	<div data-role="footer" data-position="fixed">
 		<h4>Footer</h4>
 	</div><!-- /footer -->
-</div><!-- /contactspage -->
+</div><!-- /viewReminderpage -->
 
-<!--- Social Media page ------------------------------------------>
-<div data-role="page" id="social">
+<!-- myKin Page -->
+<div data-role="page" id="myKin">
 
 	<div data-role="header">
 		<!--Header -->
-		<h1>Social Media Page</h1>
+		<h1>My Kin Page</h1>
 	</div>
 
 	<div data-role="content">
 		<!-- Navbar -->
-		<div data-role="navbar">
+		<div data-role="navbar" data-iconpos="top">
 			<ul>
-				<li><a href="#home" class="ui-btn">Home</a></li>
-				<li><a href="#social" class="ui-btn">Social Media</a></li>
-				<li><a href="#contacts" class="ui-btn">Contacts</a></li>
+				<li data-icon="home"><a href="#home" class="ui-btn">Home</a></li>
+				<li><a href="#viewReminder" class="ui-btn">Social</a></li>
+				<li><a href="#myKin" class="ui-btn">myKin</a></li>
+				<li><a href="#sendRequest" class="ui-btn">sendRequest</a></li>
+				<li><a href="#createReminder" class="ui-btn">createReminder</a></li>
 			</ul>
 		</div>
-
 		<p>Page content goes here.</p>
 		<div>Here
 		<ul data-role="listview" data-inset="true">
-			<li><a href="http://facebook.com">Facebook</a></li>
-			<li><a href="http://twitter.com">Twitter</a></li>
-			<li><a href="http://instagram.com">Instagram</a></li>
+			<li><a href="http://acura.com">Acura</a></li>
+			<li><a href="http://audi.com">Audi</a></li>
+			<li><a href="http://bmw.com">BMW</a></li>
 		</ul>
 		</div>
 		<br />
+		<div class="ui-grid-b">
+				<div class="ui-block-a"><div class="ui-bar ui-bar-a" style="height:60px">Block A</div></div>
+				<div class="ui-block-b"><div class="ui-bar ui-bar-a" style="height:60px">Block B</div></div>
+				<div class="ui-block-c"><div class="ui-bar ui-bar-a" style="height:60px">Block C</div></div>
+				<div class="ui-block-a"><div class="ui-bar ui-bar-a" style="height:60px">Block A</div></div>
+				<div class="ui-block-b"><div class="ui-bar ui-bar-a" style="height:60px">Block B</div></div>
+				<div class="ui-block-c"><div class="ui-bar ui-bar-a" style="height:60px">Block C</div></div>
+				<div class="ui-block-a"><div class="ui-bar ui-bar-a" style="height:60px">Block A</div></div>
+				<div class="ui-block-b"><div class="ui-bar ui-bar-a" style="height:60px">Block B</div></div>
+				<div class="ui-block-c"><div class="ui-bar ui-bar-a" style="height:60px">Block C</div></div>
+		</div><!-- /grid-b -->
+
 		<a data-role="button" href="http://google.com">Google</a>
 		<button>Button</button>
 	</div><!-- /content -->
@@ -127,7 +155,103 @@
 	<div data-role="footer" data-position="fixed">
 		<h4>Footer</h4>
 	</div><!-- /footer -->
-</div><!-- /socialpage -->
+</div><!-- /myKinpage -->
 
+<!-- sendRequest Page -->
+<div data-role="page" id="sendRequest">
+	<div data-role="header">
+		<!--Header -->
+		<h1>Send Request Page</h1>
+	</div>
+
+	<div data-role="content">
+		<!-- Navbar -->
+		<div data-role="navbar" data-iconpos="top">
+			<ul>
+				<li data-icon="home"><a href="#home" class="ui-btn">Home</a></li>
+				<li><a href="#viewReminder" class="ui-btn">Social</a></li>
+				<li><a href="#myKin" class="ui-btn">myKin</a></li>
+				<li><a href="#sendRequest" class="ui-btn">sendRequest</a></li>
+				<li><a href="#createReminder" class="ui-btn">createReminder</a></li>
+			</ul>
+		</div>
+		<p>Page content goes here.</p>
+		<div>Here
+		<ul data-role="listview" data-inset="true">
+			<li><a href="http://acura.com">Acura</a></li>
+			<li><a href="http://audi.com">Audi</a></li>
+			<li><a href="http://bmw.com">BMW</a></li>
+		</ul>
+		</div>
+		<br />
+		<div class="ui-grid-b">
+				<div class="ui-block-a"><div class="ui-bar ui-bar-a" style="height:60px">Block A</div></div>
+				<div class="ui-block-b"><div class="ui-bar ui-bar-a" style="height:60px">Block B</div></div>
+				<div class="ui-block-c"><div class="ui-bar ui-bar-a" style="height:60px">Block C</div></div>
+				<div class="ui-block-a"><div class="ui-bar ui-bar-a" style="height:60px">Block A</div></div>
+				<div class="ui-block-b"><div class="ui-bar ui-bar-a" style="height:60px">Block B</div></div>
+				<div class="ui-block-c"><div class="ui-bar ui-bar-a" style="height:60px">Block C</div></div>
+				<div class="ui-block-a"><div class="ui-bar ui-bar-a" style="height:60px">Block A</div></div>
+				<div class="ui-block-b"><div class="ui-bar ui-bar-a" style="height:60px">Block B</div></div>
+				<div class="ui-block-c"><div class="ui-bar ui-bar-a" style="height:60px">Block C</div></div>
+		</div><!-- /grid-b -->
+
+		<a data-role="button" href="http://google.com">Google</a>
+		<button>Button</button>
+	</div><!-- /content -->
+
+	<div data-role="footer" data-position="fixed">
+		<h4>Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /sendRequestpage -->
+
+<!-- createReminderPage -->
+<div data-role="page" id="createReminder">
+
+	<div data-role="header">
+		<!--Header -->
+		<h1>Create Reminder Page</h1>
+	</div>
+
+	<div data-role="content">
+		<!-- Navbar -->
+		<div data-role="navbar" data-iconpos="top">
+			<ul>
+				<li data-icon="home"><a href="#home" class="ui-btn">Home</a></li>
+				<li><a href="#viewReminder" class="ui-btn">Social</a></li>
+				<li><a href="#myKin" class="ui-btn">myKin</a></li>
+				<li><a href="#sendRequest" class="ui-btn">sendRequest</a></li>
+				<li><a href="#createReminder" class="ui-btn">createReminder</a></li>
+			</ul>
+		</div>
+		<p>Page content goes here.</p>
+		<div>Here
+		<ul data-role="listview" data-inset="true">
+			<li><a href="http://acura.com">Acura</a></li>
+			<li><a href="http://audi.com">Audi</a></li>
+			<li><a href="http://bmw.com">BMW</a></li>
+		</ul>
+		</div>
+		<br />
+		<div class="ui-grid-b">
+				<div class="ui-block-a"><div class="ui-bar ui-bar-a" style="height:60px">Block A</div></div>
+				<div class="ui-block-b"><div class="ui-bar ui-bar-a" style="height:60px">Block B</div></div>
+				<div class="ui-block-c"><div class="ui-bar ui-bar-a" style="height:60px">Block C</div></div>
+				<div class="ui-block-a"><div class="ui-bar ui-bar-a" style="height:60px">Block A</div></div>
+				<div class="ui-block-b"><div class="ui-bar ui-bar-a" style="height:60px">Block B</div></div>
+				<div class="ui-block-c"><div class="ui-bar ui-bar-a" style="height:60px">Block C</div></div>
+				<div class="ui-block-a"><div class="ui-bar ui-bar-a" style="height:60px">Block A</div></div>
+				<div class="ui-block-b"><div class="ui-bar ui-bar-a" style="height:60px">Block B</div></div>
+				<div class="ui-block-c"><div class="ui-bar ui-bar-a" style="height:60px">Block C</div></div>
+		</div><!-- /grid-b -->
+
+		<a data-role="button" href="http://google.com">Google</a>
+		<button>Button</button>
+	</div><!-- /content -->
+
+	<div data-role="footer" data-position="fixed">
+		<h4>Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /createReminderpage -->
 </body>
 </html>
