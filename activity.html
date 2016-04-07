@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Page Title</title>
+	<title>Activity</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -15,11 +15,11 @@
 
 	<div data-role="header">
 		<!--Header -->
-		<h1>My Reminders</h1>
+		<h1>Recent Activity</h1>
 	</div>
 
 	<div data-role="content">
-    <table data-role="table" data-mode="columntoggle" class="ui-responsive" data-column-btn-text="Click me to hide or shown columns!" id="myTable">
+    <table data-role="table" class="ui-responsive" id="myTable">
           <thead>
             <tr>
               <th data-priority="1">Contact</th>
@@ -30,25 +30,30 @@
           <tbody>
             <tr>
               <td>Kristen Faulkner</td>
-              <td>Xinchi Dai</td>
-              <td>Amelia Miller</td>
-              <td>Joan Zhang</td>
-            </tr>
-            <tr>
-              <td>Video request Sent</td>
-              <td>Text request received</td>
-              <td>Audio message sent</td>
-              <td>Phone call</td>
-            </tr>
-            <tr>
+							<td>Video request Sent</td>
               <td>April 3, 2016 1:02pm</td>
-              <td>April 5, 2016 4:59pm</td>
+						</tr>
+              <td>Amelia Miller</td>
+							<td>Audio message sent</td>
+							<td>April 5, 2016 4:59pm</td>
+            </tr>
+            <tr>
+							<td>Xinchi Dai</td>
+              <td>Text request received</td>
               <td>April 6, 2016 11:23am</td>
+            </tr>
+            <tr>
+							<td>Joan Zhang</td>
+              <td>Phone call</td>
               <td>April 6, 2016 8:59pm</td>
             </tr>
           </tbody>
         </table>
-	<a href="viewReminder.html">Test pop-up</a>
+				<div data-role="navbar" data-iconpos="top">
+						<ul>
+							<li><a href="viewReminder.html">Test pop-up</a></li>
+						</ul>
+					</div>
 	</div>
 	<!-- /content -->
 
