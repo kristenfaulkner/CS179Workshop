@@ -46,7 +46,7 @@ function loadContacts() {
 }
 
 function clearValue() {
-	$("#textInput").value = "";
+	$(".textInput").val("");
 }
 
 $(document).ready(function(){
