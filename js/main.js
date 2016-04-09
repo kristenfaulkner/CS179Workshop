@@ -16,10 +16,17 @@ function setVariables() {
 		if(localStorage){
 
 			// If so, set local variables
-			if (!localStorage.contacts) {
-				var contactList = ["Kristen Faulkner", "Amelia Miller","Xinchi Dai",
-												"Joan Zhang", "Krzysztof Gajos", "Ofra Amir","Rakesh Khurana"];
-				localStorage.setItem('stickyData', contactList);
+			if (!localStorage.reminderList) {
+				var reminderList = [
+					{name: "Kristen Faulkner"},
+					{name: "Amelia Miller"},
+					{name: "Xinchi Dai"},
+					{name: "Joan Zhang"},
+					{name: "Krzysztof Gajos"},
+					{name: "Ofra Amir"},
+					{name: "Rakesh Khurana"}
+				];
+				localStorage.setItem('reminderList', reminderList);
 			}
 
 		//  If local storage is not working, alert user
@@ -28,10 +35,18 @@ function setVariables() {
 		}
 }
 function loadContacts() {
-	var contacts = localStorage.getItem('contacts').split(",");
-	for (i = 0; i < contacts.length; i++) {
-		$('#kinList').append('<li><a href="dataPage.html">' + contacts[i] + '</a></li>');
-	}
+	var reminderList = localStorage.getItem('reminderList').split(",");
+	for (i = 0; i < reminderList.length; i++) {
+		console.log(reminderList[i]);
+		}
+	// console.log(contacts);
+	// for (i = 0; i < contacts.length; i++) {
+	// 	$('#kinList').append('<li><a href="dataPage.html">' + contacts[i] + '</a></li>');
+	// }
+}
+
+function clearValue() {
+	$("#textInput").value = "";
 }
 
 $(document).ready(function(){
