@@ -22,25 +22,33 @@
 
 
 	<div data-role="content">
+		<a href="syncContacts.html" class="ui-btn">Sync with Contacts</a>
+		<ul data-role="listview" data-inset="true" data-shadow="false">
+				<li data-role="collapsible" data-iconpos="right" >
+				<h2>Add Another Contact to Group</h2>
+				 <ul data-role="listview" data-theme="a">
+				 	<li>
+				 		<div class="fieldcontain">
+				 			<label for="fname">First Name</label>
+				 			<input type="text" name="fname" id="fname" value="" />
+				 			<div>
+				 	</li>
+				 	<li>
+				 		<div class="fieldcontain">
+				 			<label for="lname">Last Name</label>
+				 			<input type="text" name="lname" id="lname" value="" />
+				 		</div>
+				 	</li>
+				 	<li>
+				 		<div class="fieldcontain">
+				 			<label for="lname">Phone Number</label>
+				 			<input type="text" name="phoneNum" id="phoneNum" value="" />
+				 		</div>
+				 	</li>
+				 </ul>
+				</li>
+			</ul>
 
-		<form action="createReminder.html" method="post" name="newReminderIndividual">
-			<div class="fieldcontain">
-				<label for="fname">First Name</label>
-				<input type="text" name="firstName" id="fname" value="" required/>
-			<div>
-			<div class="fieldcontain">
-				<label for="lname">Last Name</label>
-				<input type="text" name="lastName" id="lname" value="" required/>
-			</div>
-			<div class="fieldcontain">
-				<label for="lname">Phone Number</label>
-				<input type="text" name="phoneNumber" id="phoneNum" value="" required/>
-			</div>
-			</br>
-			<div class="fieldcontain">
-				<input type="submit" value="Next">
-			</div>
-		</form>
 		</br>
 
 		<div data-role="navbar" data-iconpos="top">
