@@ -23,21 +23,32 @@
 
 	<div data-role="content">
 		<form action="createReminder.html" method="post" name="newReminderIndividual">
-			<a href="syncContacts.html" class="ui-btn">Sync with Contacts</a>
-			<ul data-role="listview" id="custom-listview">
-                    <li class="custom-li">
-                        <div data-role="collapsible" class="custom-collapsible">
-                            <h3>Invite</h3>
-                            <ul data-role="listview" data-inset="false">
-                                <li><a href="#">Email Invite</a></li>
-                                <li><a href="#fb_invite">Facebook Invite</a></li>
-                                <li><a href="#twitter_invite">Twitter Invite</a></li>
-                                <li><a href="#address_book_invite">Address Book Invite</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="custom-li-last"><a href="#">Normal item!</a></li>
-                </ul>
+			<div class="fieldcontain">
+				<a href="syncContacts.html" class="ui-btn">Sync with Contacts</a>
+				<ul data-role="listview" data-inset="false">
+				<li data-role="collapsible" data-iconpos="right" data-inset="false">
+				<h2>Input Contact Manually</h2>
+				 <ul data-role="listview" data-theme="a">
+				 	<li>
+				 		<div class="fieldcontain">
+				 			<label for="fname">First Name</label>
+				 			<input type="text" name="fname" id="fname" value="" />
+				 			<div>
+				 	</li>
+				 	<li>
+				 		<div class="fieldcontain">
+				 			<label for="lname">Last Name</label>
+				 			<input type="text" name="lname" id="lname" value="" />
+				 		</div>
+				 	</li>
+				 	<li>
+				 		<div class="fieldcontain">
+				 			<label for="lname">Phone Number</label>
+				 			<input type="text" name="phoneNum" id="phoneNum" value="" />
+				 		</div>
+				 	</li>
+				 </ul>
+			</div>
 			</br>
 			<div class="fieldcontain">
 				<input type="submit" value="Next">
