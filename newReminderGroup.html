@@ -19,70 +19,132 @@
 		<h1>New Reminder</h1>
 	</div>
 
-
-
 	<div data-role="content">
 
 		<form method="post" action="createReminder.html">
-			<div class="fieldcontain">
-				<label for="fname">Group Name</label>
-				<input type="text" name="fname" id="fname" value="" />
-			<div>
-
-			<h2>Contact 1</h2>
-			<div class="fieldcontain">
-				<label for="fname">First Name</label>
-				<input type="text" name="fname" id="fname" value="" />
-			<div>
-			<div class="fieldcontain">
-				<label for="lname">Last Name</label>
-				<input type="text" name="lname" id="lname" value="" />
-			</div>
-			<div class="fieldcontain">
-				<label for="lname">Phone Number</label>
-				<input type="text" name="phoneNum" id="phoneNum" value="" />
-			</div>
-			</br>
-
-			<h2>Contact 2</h2>
-			<div class="fieldcontain">
-				<label for="fname">First Name</label>
-				<input type="text" name="fname" id="fname" value="" />
-			<div>
-			<div class="fieldcontain">
-				<label for="lname">Last Name</label>
-				<input type="text" name="lname" id="lname" value="" />
-			</div>
-			<div class="fieldcontain">
-				<label for="lname">Phone Number</label>
-				<input type="text" name="phoneNum" id="phoneNum" value="" />
-			</div>
-			</br>
-
 			<ul data-role="listview" data-inset="true" data-shadow="false">
-				<li data-role="collapsible" data-iconpos="right" data-inset="false">
-				<h2>Add Another Contact to Group</h2>
-				 <ul data-role="listview" data-theme="a">
-				 	<li>
-				 		<div class="fieldcontain">
-				 			<label for="fname">First Name</label>
-				 			<input type="text" name="fname" id="fname" value="" />
-				 			<div>
-				 	</li>
-				 	<li>
-				 		<div class="fieldcontain">
-				 			<label for="lname">Last Name</label>
-				 			<input type="text" name="lname" id="lname" value="" />
-				 		</div>
-				 	</li>
-				 	<li>
-				 		<div class="fieldcontain">
-				 			<label for="lname">Phone Number</label>
-				 			<input type="text" name="phoneNum" id="phoneNum" value="" />
-				 		</div>
-				 	</li>
-				 </ul>
-				</li>
+
+
+				<!-- <li data-role="collapsible" data-iconpos="right" data-inset="false">
+					<h2>Input your Contacts</h2>
+					<ul data-role="listview" data-theme="a">
+						<li>
+							<div class="fieldcontain">
+								<label for="fname">Group Name</label>
+								<input type="text" name="fname" id="fname" value="" />
+							<div>
+						</li>
+						<div id = "contact1">
+							<li>
+								<h2>Contact 1</h2>
+								<div class="fieldcontain">
+									<label for="fname">First Name</label>
+									<input type="text" name="fname" id="fname" value="" />
+								<div>
+							</li>
+							<li>
+								<div class="fieldcontain">
+								<label for="lname">Last Name</label>
+								<input type="text" name="lname" id="lname" value="" />
+								</div>
+							</li>
+							<li>
+								<div class="fieldcontain">
+								<label for="lname">Phone Number</label>
+								<input type="text" name="phoneNum" id="phoneNum" value="" />
+								</div>
+							</li>
+						</div>
+						<div id = "contact2">
+							<li>
+								<h2>Contact 2</h2>
+								<div class="fieldcontain">
+									<label for="fname">First Name</label>
+									<input type="text" name="fname" id="fname" value="" />
+								<div>
+							</li>
+							<li>
+								<div class="fieldcontain">
+								<label for="lname">Last Name</label>
+								<input type="text" name="lname" id="lname" value="" />
+								</div>
+							</li>
+							<li>
+								<div class="fieldcontain">
+								<label for="lname">Phone Number</label>
+								<input type="text" name="phoneNum" id="phoneNum" value="" />
+								</div>
+							</li>
+						</div>
+
+					</ul>
+				</li> -->
+
+
+				<div data-role="collapsible" class="custom-collapsible">
+                            <h3>Input New Contacts</h3>
+                           <ul data-role="listview" data-theme="a">
+							<li>
+								<div class="fieldcontain">
+									<label for="fname">Group Name</label>
+									<input type="text" name="fname" id="fname" value="" />
+								<div>
+							</li>
+
+							<div id = "contact1" data-role="content">
+								<li>
+									<h4>Contact 1</h4>
+									<div class="fieldcontain">
+										<label for="fname">First Name</label>
+										<input type="text" name="fname" id="fname" value="" />
+									<div>
+								</li>
+								<li>
+									<div class="fieldcontain">
+									<label for="lname">Last Name</label>
+									<input type="text" name="lname" id="lname" value="" />
+									</div>
+								</li>
+								<li>
+									<div class="fieldcontain">
+									<label for="lname">Phone Number</label>
+									<input type="text" name="phoneNum" id="phoneNum" value="" />
+									</div>
+								</li>
+							</div>
+							<div id = "contact2" data-role="content">
+								<li>
+									<h4>Contact 2</h4>
+									<div class="fieldcontain">
+										<label for="fname">First Name</label>
+										<input type="text" name="fname" id="fname" value="" />
+									<div>
+								</li>
+								<li>
+									<div class="fieldcontain">
+									<label for="lname">Last Name</label>
+									<input type="text" name="lname" id="lname" value="" />
+									</div>
+								</li>
+								<li>
+									<div class="fieldcontain">
+									<label for="lname">Phone Number</label>
+									<input type="text" name="phoneNum" id="phoneNum" value="" />
+									</div>
+								</li>
+							</div>
+
+					<!-- </ul> -->
+                        </div>
+                    <li class="custom-li-last"><a href="#">Sync with contacts</a></li>
+                </ul>
+            	</div>
+
+
+
+
+				
+					
 			</ul>
 
 			<div class="fieldcontain">
