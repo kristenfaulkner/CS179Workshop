@@ -10,8 +10,12 @@
 	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </head>
 <body>
-	<h1 style="text-align: center;">Your reminder has been saved!</h1>
+	<h1 style="text-align: center;">Your reminder has been saved with <?php echo $_POST["firstName"]; $_POST["lastName"]; ?>!</h1>
 	<br>
+	<p>Name: <?php echo $_POST["firstName"]; $_POST["lastName"]; ?><br></p>
+	<p>Phone Number: <?php echo $_POST["phoneNumber"]; ?></p>
+	<p> Frequency: <?php echo $_POST["radio-choice-day"]; echo $_POST["radio-choice-week"]; echo $_POST["radio-choice-month"]; ?></p>
+  <p> Type: <?php echo implode(', ',$_POST['type']); ?></p>
 	<br>
 	 <div data-role="navbar" data-iconpos="top">
 			<ul>
