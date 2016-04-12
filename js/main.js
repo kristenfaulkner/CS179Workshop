@@ -36,13 +36,11 @@ function setVariables() {
 function setLocalID(id) {
 	localStorage.set('reminderID', id);
 }
+
 function loadContacts() {
 	var contacts = JSON.parse(localStorage.getItem('reminderList'));
 	for (i = 0; i < contacts.length; i++) {
-		$('#kinList').append('<li><a href="dataPage.html?reminderID=' +
-			contacts[i].reminderID +
-			'" + 'onclick=setstorageId(' + contacts[i].reminderID' + 'class="ui-btn ui-btn-icon-right ui-icon-carat-r" data-reminderID=' +
-			contacts[i].reminderID + '>' + contacts[i].firstName + " " + contacts[i].lastName + '</a></li>');
+		$('#kinList').append('<li><a href="dataPage.html" class="ui-btn ui-btn-icon-right ui-icon-carat-r">' + contacts[i].firstName + " " + contacts[i].lastName + '</a></li>');
 	}
 }
 
