@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page Title</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/main.js"></script>
+</head>
+<body>
+<!--- addContact page ------------------------------------------>
+<div data-role="page" id="addContact">
+
+	<div data-role="header">
+		 <a href="index.html" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-carat-l">Back</a>
+		<h1>Spokin</h1>
+	</div>
+
+
+
+	<div data-role="content">
+
+		<form action="myKin.html" method="post" name="signUp">
+			<div class="fieldcontain">
+				<label for="fname">Username</label>
+				<input type="text" name="firstName" id="username" value="" required/>
+			<div>
+			<div class="fieldcontain">
+				<label for="password1">Password</label>
+				<input type="password" name="lastName" id="password1" value="" required/>
+			</div>
+			<div class="fieldcontain">
+				<label for="password2">Repeat Password</label>
+				<input type="password" name="phoneNumber" id="password2" value="" required/>
+			</div>
+			</br>
+			<div class="fieldcontain">
+				<input type="submit" value="Sign Up">
+			</div>
+		</form>
+		</br>
+
+		<div data-role="footer"> 
+			</br>
+			</br>
+		</div> 
+	
+
+	</div><!-- /content -->
+
+</div><!-- /addContactpage -->
+
+</body>
+</html>

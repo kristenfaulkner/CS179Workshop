@@ -16,27 +16,35 @@
 
 	<div data-role="header">
 		<!--Header -->
-		<h1>New Reminder</h1>
+    <a href="index.html" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-carat-l">Back</a>
+		<h1>Spokin</h1>
 	</div>
 
 
 
 	<div data-role="content">
 
-		<form method="post" action="createReminder.html">
-		
-		<a href="newReminderIndividual.html" class="ui-btn">Add an Individual</a>
-		<a href="newReminderGroup.html" class="ui-btn">Add a Group</a>
+		<form action="myKin.html" method="post" name="signUp">
+			<div class="fieldcontain">
+				<label for="fname">Username</label>
+				<input type="text" name="firstName" id="username" value="" required/>
+			<div>
+			<div class="fieldcontain">
+				<label for="password1">Password</label>
+				<input type="password" name="lastName" id="password1" value="" required/>
+			</div>
+			</br>
+			<div class="fieldcontain">
+				<input type="submit" value="Sign In">
+			</div>
+		</form>
 		</br>
 
-		<div data-role="navbar" data-iconpos="top">
-			<ul>
-				<li><a href="myKin.html" class="ui-btn" data-icon="user">My Reminders</a></li>
-				<li><a href="newReminderView1.html" class="ui-btn" data-icon="plus">Add Reminders</a></li>
-				<li><a href="sendRequest.html" class="ui-btn" data-icon="forward">Send Request</a></li>
-				<li><a href="activity.html" class="ui-btn" data-icon="grid">Activity</a></li>
-			</ul>
-		</div>
+		<div data-role="footer"> 
+			</br>
+			</br>
+		</div> 
+	
 	</div><!-- /content -->
 
 </div><!-- /addContactpage -->

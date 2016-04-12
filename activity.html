@@ -49,11 +49,16 @@
             </tr>
           </tbody>
         </table>
-				<div data-role="navbar" data-iconpos="top">
-						<ul>
-							<li><a href="viewReminder.html">Test pop-up</a></li>
-						</ul>
-					</div>
+				
+        <a href="#popupBasic" class = "ui-btn" data-rel="popup">Test Popup</a>
+
+	<div data-role="popup" id="popupBasic" data-transition="fade" data-theme = "b" data-overlay-theme = "a">
+		<p>Time to send your mom a text!<p>
+		<input type="text" name="fname" placeholder="Miss you! Mom!" class="textInput"></input>
+		<a href="#Reminder" data-role="button" data-inline="true" data-mini="true" onclick="clearValue()">Send </a>
+		<a href="#Reminder" data-role="button" data-inline="true" data-theme="b" data-mini="true" onclick="clearValue()">Later</a>
+	</div>
+
 	</div>
 	<!-- /content -->
 
