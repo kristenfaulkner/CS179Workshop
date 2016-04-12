@@ -14,7 +14,7 @@
 	<br>
 	<p>Name: <?php echo $_POST["firstName"]; $_POST["lastName"]; ?><br></p>
 	<p>Phone Number: <?php echo $_POST["phoneNumber"]; ?></p><br>
-	<p> Frequency: <?php echo $_POST["radio-choice-day"]; ?></p>
+	<p> Frequency: <?php echo $_POST["radio-choice-day"] or $_POST["radio-choice-week"] or $_POST["radio-choice-month"]; ?></p>
 	<p> Frequency: <?php echo $_POST["radio-choice-week"]; ?></p>
 	<p> Frequency: <?php echo $_POST["radio-choice-month"]; ?></p>
 	<br>
