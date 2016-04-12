@@ -16,18 +16,16 @@ function setVariables() {
 		if(localStorage){
 
 			// If so, set local variables
-			if (!localStorage.reminderList) {
-				var reminderList = [
-					{name: "Kristen Faulkner"},
-					{name: "Amelia Miller"},
-					{name: "Xinchi Dai"},
-					{name: "Joan Zhang"},
-					{name: "Krzysztof Gajos"},
-					{name: "Ofra Amir"},
-					{name: "Rakesh Khurana"}
-				];
-				localStorage.setItem('reminderList', reminderList);
-			}
+			var reminderList = [
+				{reminderID: 0, firstName: "Kristen",  lastName: "Faulkner", frequency: "day",   type: ["text, photo, article"], active: 1},
+				{reminderID: 1, firstName: "Amelia",   lastName: "Miller",   frequency: "day",   type: ["text, video, article"], active: 1},
+				{reminderID: 2, firstName: "Xinchi",   lastName: "Dai",      frequency: "month", type: ["text, photo, music"],   active: 1},
+				{reminderID: 3, firstName: "Joan",     lastName: "Zhang",    frequency: "week",  type: ["photo, music, video"],  active: 1},
+				{reminderID: 4, firstName: "Krzysztof",lastName: "Gajos",    frequency: "week",  type: ["text, photo, video"],   active: 1},
+				{reminderID: 5, firstName: "Ofra",     lastName: "Amir",     frequency: "month", type: ["photo, music, video"],  active: 1},
+				{reminderID: 6, firstName: "Rakesh",   lastName: "Khurana",  frequency: "week",  type: ["text, music, article"], active: 1}
+			];
+			localStorage.setItem('reminderList', JSON.stringify(reminderList));
 
 		//  If local storage is not working, alert user
 		} else {
@@ -35,20 +33,26 @@ function setVariables() {
 		}
 }
 function loadContacts() {
-	var reminderList = localStorage.getItem('reminderList').split(",");
-	for (i = 0; i < reminderList.length; i++) {
-		console.log(reminderList[i]);
-		}
-	// console.log(contacts);
-	// for (i = 0; i < contacts.length; i++) {
-	// 	$('#kinList').append('<li><a href="dataPage.html">' + contacts[i] + '</a></li>');
-	// }
+	var contacts = JSON.parse(localStorage.getItem('reminderList'));
+	for (i = 0; i < contacts.length; i++) {
+		$('#kinList').append('<li><a href="dataPage.html" class="ui-btn ui-btn-icon-right ui-icon-carat-r" data-reminderID=' + contacts[i].reminderID + '>' + contacts[i].firstName + " " + contacts[i].lastName + '</a></li>');
+	}
 }
 
 function clearValue() {
 	$(".textInput").val("");
 }
 
+function addReminder(newReminder) {
+	var contacts = JSON.parse(localStorage.getItem('reminderList'));
+	newReminder.reminderID = contacts.length;
+	contacts = contacts.append (newReminder);
+	localStorage.reminderList = contacts;
+}
+
+function alertHello() {
+	alert("hello!");
+}
 $(document).ready(function(){
 	setVariables();
 	loadContacts();
