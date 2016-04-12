@@ -15,10 +15,10 @@
 	<p>Name: <?php echo $_POST["firstName"]; $_POST["lastName"]; ?><br></p>
 	<p>Phone Number: <?php echo $_POST["phoneNumber"]; ?></p><br>
 	<p> Frequency: <?php echo $_POST["radio-choice-day"]; echo $_POST["radio-choice-week"]; echo $_POST["radio-choice-month"]; ?></p>p>
-  <p>Type: <?php echo $_POST["checkbox-text"]; ?></p><br>
-	<p>Type: <?php echo $_POST["checkbox-photo"]; ?></p><br>
-	<p>Type: <?php echo $_POST["checkbox-video"]; ?></p><br>
-	<p>Type: <?php echo $_POST["checkbox-article"]; ?></p><br>
+  <p>Text: <?php echo $_POST["checkbox-text"]; ?></p><br>
+	<p>Photo: <?php echo $_POST["checkbox-photo"]; ?></p><br>
+	<p>Video: <?php echo $_POST["checkbox-video"]; ?></p><br>
+	<p>Article: <?php echo $_POST["checkbox-article"]; ?></p><br>
 	<br>
 	 <div data-role="navbar" data-iconpos="top">
 			<ul>
