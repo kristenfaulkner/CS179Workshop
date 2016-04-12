@@ -24,9 +24,10 @@
 	<div data-role="content">
 		<form action="createReminder.html" method="post" name="newReminderIndividual">
 			<div class="fieldcontain">
-				<ul data-role="listview" data-inset="false">
 				<a href="syncContacts.html" class="ui-btn">Sync with Contacts</a>
-				<li data-role="collapsible" data-iconpos="right" data-inset="false">
+				<ul data-role="listview" id="custom-listview">
+					<li class="custom-li">
+                        <div data-role="collapsible" class="custom-collapsible">
 				<h2>Input Contact Manually</h2>
 				 <ul data-role="listview" data-theme="a">
 				 	<li>
