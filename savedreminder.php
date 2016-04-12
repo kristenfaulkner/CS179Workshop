@@ -12,6 +12,9 @@
 <body>
 	<h1 style="text-align: center;">Your reminder has been saved!</h1>
 	<br>
+	<p>Welcome <?php echo $_POST["firstName"]; ?><br></p>
+	Your email address is: <?php echo $_POST["phoneNumber"]; ?><br>
+	and the data is <? php echo $_POST; ?>
 	<br>
 	 <div data-role="navbar" data-iconpos="top">
 			<ul>
