@@ -22,10 +22,11 @@
 
 
 	<div data-role="content">
-		<a href="syncContacts.html" class="ui-btn">Sync with Contacts</a>
-		<ul style="list-style-type:none">
+		<form action="createReminder.html" method="post" name="newReminderIndividual">
+			<a href="syncContacts.html" class="ui-btn">Sync with Contacts</a>
+			<ul data-role="listview" data-inset="true" data-shadow="false">
 				<li data-role="collapsible" data-iconpos="right" data-inset="false">
-				<h2>Add Another Contact to Group</h2>
+				<h2>Input Contact Manually</h2>
 				 <ul data-role="listview" data-theme="a">
 				 	<li>
 				 		<div class="fieldcontain">
@@ -46,13 +47,8 @@
 				 		</div>
 				 	</li>
 				 </ul>
-				</li>
-			</ul>
-
+		</form>
 		</br>
-		<div class="fieldcontain">
-				<input type="submit" value="Next">
-			</div>
 
 		<div data-role="navbar" data-iconpos="top">
 			<ul>
