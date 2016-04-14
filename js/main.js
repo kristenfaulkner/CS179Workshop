@@ -54,6 +54,7 @@ function addReminder(newReminder) {
 
 function saveInfo() {
 	var contacts = JSON.parse(localStorage.reminderList);
+	alert("insidefunction!");
 	var newReminder = {
 		reminderID: contacts.length,
 		firstName: $("#fName").val(),
@@ -71,9 +72,15 @@ function saveInfo() {
 
 $(document).ready(function(){
 		setVariables();
-		$("#saveReminder").click(saveInfo);
 });
 
 $(document).on('pageshow', '#myKin' ,function(){
 		loadContacts();
+});
+
+$(document).on('pageshow', '#addContact' ,function(){
+	$("#saveReminderButton").click(function() {
+		alert("hello!");
+		saveInfo();
+	});
 });

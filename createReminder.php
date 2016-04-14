@@ -11,7 +11,7 @@
 </head>
 <body>
 <!--- Create Reminder page ------------------------------------------>
-<div data-role="page" id="myKin">
+<div data-role="page" id="createReminder">
 
 	<div data-role="header">
 		<!--Header -->
@@ -20,7 +20,7 @@
 
 	<div data-role="content">
 
-	<form method="post" action="savedreminder.php" name="reminderInfo">
+	<form method="post" action="savedreminder.html" name="reminderInfo">
 
         <div class="fieldcontain" data-role="controlgroup">
         <legend>How often do you want to communicate?</legend>
