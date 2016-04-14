@@ -33,10 +33,6 @@ function setVariables() {
 		}
 }
 
-function setLocalID(id) {
-	localStorage.set('reminderID', id);
-}
-
 function loadContacts() {
 	var contacts = JSON.parse(localStorage.getItem('reminderList'));
 	for (i = 0; i < contacts.length; i++) {
@@ -55,9 +51,6 @@ function addReminder(newReminder) {
 	localStorage.reminderList = contacts;
 }
 
-function alertHello() {
-	alert("hello!");
-}
 $(document).ready(function(){
 	setVariables();
 	loadContacts();

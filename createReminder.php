@@ -20,7 +20,7 @@
 
 	<div data-role="content">
 
-	<form method="post" action="savedreminder.php">
+	<form method="post" action="savedreminder.php" name="reminderInfo">
 
         <div class="fieldcontain" data-role="controlgroup">
         <legend>How often do you want to communicate?</legend>
@@ -46,6 +46,7 @@
         <input type="checkbox" name="type[]" id="checkbox-v-2e" value="Article">
         <label for="checkbox-v-2e">Article</label>
     </div>
+		<input type=hidden id="userData" name="userData" value=<?php {firstName: $_POST["firstName"], lastName: $_POST["lastName"]} ?>/>
 
     <div class="fieldcontain">
     	<input type="submit" value="Save">
