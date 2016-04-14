@@ -35,7 +35,7 @@ function setVariables() {
 
 function loadContacts() {
 	var contacts = JSON.parse(localStorage.getItem('reminderList'));
-	//$('#kinList').innerHTML = "";
+	$('#kinList').innerHTML = "";
 	for (i = 0; i < contacts.length; i++) {
 	$('#kinList').append('<li><a href="dataPage.html" class="ui-btn ui-btn-icon-right ui-icon-carat-r">' + contacts[i].firstName + " " + contacts[i].lastName + '</a></li>');
 	}
@@ -54,7 +54,6 @@ function addReminder(newReminder) {
 
 function saveInfo() {
 	var contacts = JSON.parse(localStorage.reminderList);
-	alert("insidefunction!");
 	var newReminder = {
 		reminderID: contacts.length,
 		firstName: $("#fName").val(),
@@ -80,7 +79,6 @@ $(document).on('pageshow', '#myKin' ,function(){
 
 $(document).on('pageshow', '#addContact' ,function(){
 	$("#saveReminderButton").click(function() {
-		alert("hello!");
 		saveInfo();
 	});
 });
