@@ -53,8 +53,7 @@ function addReminder(newReminder) {
 }
 
 function saveInfo() {
-	alert("saving");
-	var contacts = localStorage.getItem('reminderList');
+	var contacts = JSON.parse(localStorage.reminderList);
 	var newReminder = {
 		reminderID: contacts.length,
 		firstName: $("#fName").val(),
@@ -67,11 +66,12 @@ function saveInfo() {
 		active: 1
 	};
 	contacts.push(newReminder);
-	localStorage.setItem('reminderList', contacts);
+	localStorage.setItem('reminderList', JSON.stringify(contacts));
 }
 
 $(document).ready(function(){
 		setVariables();
+		$("#saveReminder").click(saveInfo);
 });
 
 $(document).on('pageshow', '#myKin' ,function(){
