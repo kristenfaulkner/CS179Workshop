@@ -46,9 +46,7 @@
         <input type="checkbox" name="type[]" id="checkbox-v-2e" value="Article">
         <label for="checkbox-v-2e">Article</label>
     </div>
-		<input type=hidden id="userData" name="userData" value=<?php {firstName: $_POST["firstName"], lastName: $_POST["lastName"]} ?>/>
-
-    <div class="fieldcontain">
+		<div class="fieldcontain">
     	<input type="submit" value="Save">
 	</div>
 

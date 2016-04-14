@@ -19,10 +19,8 @@
 		<h1>New Reminder</h1>
 	</div>
 
-
-
 	<div data-role="content">
-		<form method="post" action="createReminder.php">
+		<form method="post" action="savedReminder.html">
 			<ul data-role="listview" data-inset="true" data-shadow="false">
 				<li class="custom-li-last"><a href="syncContact.html">Sync with contacts</a></li>
 				<div data-role="collapsible" class="custom-collapsible">
@@ -50,6 +48,29 @@
 									</div>
 								</li>
 							</div>
+							<div class="fieldcontain" data-role="controlgroup" id="newReminderFrequency">
+							<legend>How often do you want to communicate?</legend>
+							<input type="radio" name="frequency" id="radio-choice-v-2a" value="Once a day" checked="checked">
+							<label for="radio-choice-v-2a">Once a day</label>
+							<input type="radio" name="frequency" id="radio-choice-v-2b" value="Once a week">
+							<label for="radio-choice-v-2b">Once a week</label>
+							<input type="radio" name="frequency" id="radio-choice-v-2c" value="Once a month">
+							<label for="radio-choice-v-2c">Once a month</label>
+					</div>
+
+					<div class="fieldcontain" data-role="controlgroup" id="newReminderType">
+							<legend>What type of communication you want to share?</legend>
+							<input type="checkbox" name="type[]" id="checkbox-v-2a" value="Text">
+							<label for="checkbox-v-2a">Text</label>
+							<input type="checkbox" name="type[]" id="checkbox-v-2b" value="Photo">
+							<label for="checkbox-v-2b">Photo</label>
+							<input type="checkbox" name="type[]" id="checkbox-v-2c" value="Music">
+							<label for="checkbox-v-2c">Music</label>
+							<input type="checkbox" name="type[]" id="checkbox-v-2d" value="Video">
+							<label for="checkbox-v-2d">Video</label>
+							<input type="checkbox" name="type[]" id="checkbox-v-2e" value="Article">
+							<label for="checkbox-v-2e">Article</label>
+					</div>
 						<div class="fieldcontain" data-role="content">
 							<input type="submit" value="Next">
 						</div>
@@ -75,8 +96,5 @@
 	</div><!-- /content -->
 
 </div><!-- /addContactpage -->
-<script>
-$.post("createReminder.php", $("form").serialize());
-</script>
 </body>
 </html>

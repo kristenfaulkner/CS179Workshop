@@ -13,7 +13,7 @@
 // });
 // } )( jQuery );
 function setVariables() {
-		if(localStorage){
+		if (localStorage) {
 
 			// If so, set local variables
 			var reminderList = [
@@ -35,8 +35,9 @@ function setVariables() {
 
 function loadContacts() {
 	var contacts = JSON.parse(localStorage.getItem('reminderList'));
+	//$('#kinList').innerHTML = "";
 	for (i = 0; i < contacts.length; i++) {
-		$('#kinList').append('<li><a href="dataPage.html" class="ui-btn ui-btn-icon-right ui-icon-carat-r">' + contacts[i].firstName + " " + contacts[i].lastName + '</a></li>');
+	$('#kinList').append('<li><a href="dataPage.html" class="ui-btn ui-btn-icon-right ui-icon-carat-r">' + contacts[i].firstName + " " + contacts[i].lastName + '</a></li>');
 	}
 }
 
@@ -45,13 +46,34 @@ function clearValue() {
 }
 
 function addReminder(newReminder) {
-	var contacts = JSON.parse(localStorage.getItem('reminderList'));
+	var contacts = localStorage.getItem('reminderList');
 	newReminder.reminderID = contacts.length;
-	contacts = contacts.append (newReminder);
+	contacts = contacts.push(newReminder);
 	localStorage.reminderList = contacts;
 }
 
+function saveInfo() {
+	alert("saving");
+	var contacts = localStorage.getItem('reminderList');
+	var newReminder = {
+		reminderID: contacts.length,
+		firstName: $("#fName").val(),
+		lastName: $("#lname").val(),
+		phoneNumber: $("#phoneNum").val(),
+		frequency: $("#newReminderFrequency :radio:checked").val(),
+		type: $('input[type=checkbox]:checked').map(function(_, el) {
+    				return $(el).val();
+					}).get(),
+		active: 1
+	};
+	contacts.push(newReminder);
+	localStorage.setItem('reminderList', contacts);
+}
+
 $(document).ready(function(){
-	setVariables();
-	loadContacts();
+		setVariables();
+});
+
+$(document).on('pageshow', '#myKin' ,function(){
+		loadContacts();
 });
