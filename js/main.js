@@ -56,7 +56,7 @@ function saveInfo() {
 	var contacts = JSON.parse(localStorage.reminderList);
 	var newReminder = {
 		reminderID: contacts.length,
-		firstName: $("#fName").val(),
+		firstName: $("#fname").val(),
 		lastName: $("#lname").val(),
 		phoneNumber: $("#phoneNum").val(),
 		frequency: $("#newReminderFrequency :radio:checked").val(),
