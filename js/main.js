@@ -17,13 +17,13 @@ function setVariables() {
 
 			// If so, set local variables
 			var reminderList = [
-				{reminderID: 0, firstName: "Kristen",  lastName: "Faulkner", frequency: "day",   type: ["text, photo, article"], active: 1},
-				{reminderID: 1, firstName: "Amelia",   lastName: "Miller",   frequency: "day",   type: ["text, video, article"], active: 1},
-				{reminderID: 2, firstName: "Xinchi",   lastName: "Dai",      frequency: "month", type: ["text, photo, music"],   active: 1},
-				{reminderID: 3, firstName: "Joan",     lastName: "Zhang",    frequency: "week",  type: ["photo, music, video"],  active: 1},
-				{reminderID: 4, firstName: "Krzysztof",lastName: "Gajos",    frequency: "week",  type: ["text, photo, video"],   active: 1},
-				{reminderID: 5, firstName: "Ofra",     lastName: "Amir",     frequency: "month", type: ["photo, music, video"],  active: 1},
-				{reminderID: 6, firstName: "Rakesh",   lastName: "Khurana",  frequency: "week",  type: ["text, music, article"], active: 1}
+				{reminderID: 0, firstName: "Kristen",  lastName: "Faulkner", frequency: "day",  communicationType: ["text, photo, article"], active: 1},
+				{reminderID: 1, firstName: "Amelia",   lastName: "Miller",   frequency: "day",  communicationType: ["text, video, article"], active: 1},
+				{reminderID: 2, firstName: "Xinchi",   lastName: "Dai",      frequency: "month",communicationType: ["text, photo, music"],   active: 1},
+				{reminderID: 3, firstName: "Joan",     lastName: "Zhang",    frequency: "week", communicationType: ["photo, music, video"],  active: 1},
+				{reminderID: 4, firstName: "Krzysztof",lastName: "Gajos",    frequency: "week", communicationType: ["text, photo, video"],   active: 1},
+				{reminderID: 5, firstName: "Ofra",     lastName: "Amir",     frequency: "month",communicationType: ["photo, music, video"],  active: 1},
+				{reminderID: 6, firstName: "Rakesh",   lastName: "Khurana",  frequency: "week", communicationType: ["text, music, article"], active: 1}
 			];
 			localStorage.setItem('reminderList', JSON.stringify(reminderList));
 
@@ -60,7 +60,7 @@ function saveInfo() {
 		lastName: $("#lname").val(),
 		phoneNumber: $("#phoneNum").val(),
 		frequency: $("#newReminderFrequency :radio:checked").val(),
-		type: $('input[type=checkbox]:checked').map(function(_, el) {
+		communicationType: $('input[type=checkbox]:checked').map(function(_, el) {
     				return $(el).val();
 					}).get(),
 		active: 1
@@ -69,12 +69,27 @@ function saveInfo() {
 	localStorage.setItem('reminderList', JSON.stringify(contacts));
 }
 
+function displaySavedContact() {
+	//alert("working!");
+	var contacts = JSON.parse(localStorage.reminderList);
+	var newContact = contacts[contacts.length - 1];
+	$("#contactInfo").append('<p><strong>First Name:</strong> ' + newContact.firstName + '</p>');
+	$("#contactInfo").append('<p><strong>Last Name:</strong>  ' + newContact.lastName + '</p>');
+	$("#contactInfo").append('<p><strong>Phone Number:</strong>  ' + newContact.phoneNumber + '</p>');
+	$("#contactInfo").append('<p><strong>Frequency:</strong>  ' + newContact.frequency + '</p>');
+	$("#contactInfo").append('<p><strong>Type:</strong>  ' + newContact.communicationType + '</p>');
+}
+
 $(document).ready(function(){
 		setVariables();
 });
 
 $(document).on('pageshow', '#myKin' ,function(){
 		loadContacts();
+});
+
+$(document).on('pageshow', '#savedReminder' ,function(){
+		displaySavedContact();
 });
 
 $(document).on('pageshow', '#addContact' ,function(){
