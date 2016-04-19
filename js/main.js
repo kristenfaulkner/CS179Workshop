@@ -35,7 +35,7 @@ function setVariables() {
 
 function loadKinContacts() {
 	var contacts = JSON.parse(localStorage.getItem('reminderList'));
-	$('#kinList').innerHTML = "";
+	$('#kinList').html("");
 	for (i = 0; i < contacts.length; i++) {
 		$('#kinList').append('<li><a href="dataPage.html" class="ui-btn ui-btn-icon-right ui-icon-carat-r">' + contacts[i].firstName + " " + contacts[i].lastName + '</a></li>');
 	}
