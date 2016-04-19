@@ -11,7 +11,7 @@
 	<script type="text/javascript" charset="utf-8" src="js/main.js"></script>
 </head>
 <body>
-<div data-role="page" id="addContact">
+<div data-role="page" id="addGroupContact">
 
 	<div data-role="header">
 		<a href="newReminderView1.html" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-carat-l">Back</a>
@@ -20,7 +20,7 @@
 
 	<div data-role="content">
 
-		<form method="post" action="createReminder.html">
+		<form method="post" action="savedreminder.html">
 			<ul data-role="listview" data-inset="true" data-shadow="false">
 				<li class="custom-li-last"><a href="syncContactsGroup.html">Sync with contacts</a></li>
 				<div data-role="collapsible" class="custom-collapsible">
@@ -28,8 +28,8 @@
                            <ul data-role="listview" data-theme="a">
 							<li>
 								<div class="fieldcontain">
-									<label for="fname">Group Name</label>
-									<input type="text" name="fname" id="fname" value="" />
+									<label for="groupname">Group Name</label>
+									<input type="text" name="groupname" id="groupname" value="" />
 								<div>
 							</li>
 
@@ -96,25 +96,41 @@
 									</div>
 								</li>
 							</div>
-						<div class="fieldcontain" data-role="content">
-							<input type="submit" value="Next">
-						</div>
 
-					<!-- </ul> -->
-                        </div>
-                    
-                </ul>
-            	</div>
+                	<div class="ui-content" data-role="controlgroup" id="newReminderFrequency">
+							<legend>How often do you want to communicate?</legend>
+							<input type="radio" name="frequency" id="radio-choice-v-2a" value="Once a day" checked="checked">
+							<label for="radio-choice-v-2a">Once a day</label>
+							<input type="radio" name="frequency" id="radio-choice-v-2b" value="Once a week">
+							<label for="radio-choice-v-2b">Once a week</label>
+							<input type="radio" name="frequency" id="radio-choice-v-2c" value="Once a month">
+							<label for="radio-choice-v-2c">Once a month</label>
+					</div>
 
-
-
-
-				
+					<div class="ui-content" data-role="controlgroup" id="newReminderType">
+							<legend>What type of communication you want to share?</legend>
+							<input type="checkbox" name="type[]" id="checkbox-v-2a" value="Text">
+							<label for="checkbox-v-2a">Text</label>
+							<input type="checkbox" name="type[]" id="checkbox-v-2b" value="Photo">
+							<label for="checkbox-v-2b">Photo</label>
+							<input type="checkbox" name="type[]" id="checkbox-v-2c" value="Music">
+							<label for="checkbox-v-2c">Music</label>
+							<input type="checkbox" name="type[]" id="checkbox-v-2d" value="Video">
+							<label for="checkbox-v-2d">Video</label>
+							<input type="checkbox" name="type[]" id="checkbox-v-2e" value="Article">
+							<label for="checkbox-v-2e">Article</label>
+					</div>
 					
-			</ul>
+					<div class="fieldcontain" data-role="content">
+						<input type="submit" value="Next" id="saveReminderButton">
+					</div>
 
-			
+					</div> 
+                </ul>
+            	</div>	
+            </ul>		
 		</form>
+		
 		</br>
 
 		<div data-role="navbar" data-iconpos="top">

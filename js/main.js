@@ -77,6 +77,24 @@ function saveNewContact() {
 	localStorage.setItem('reminderList', JSON.stringify(contacts));
 }
 
+
+function saveGroupContact() {
+	var contacts = JSON.parse(localStorage.reminderList);
+	var newReminder = {
+		reminderID: contacts.length,
+		firstName: $("#groupname").val(),
+		lastName: "",
+		phoneNumber: "N/A",
+		frequency: $("#newReminderFrequency :radio:checked").val(),
+		communicationType: $('input[type=checkbox]:checked').map(function(_, el) {
+    				return $(el).val();
+					}).get(),
+		active: 1
+	};
+	contacts.push(newReminder);
+	localStorage.setItem('reminderList', JSON.stringify(contacts));
+}
+
 function saveSycedContact() {
 	alert("hello");
 	var contacts = JSON.parse(localStorage.reminderList);
@@ -124,6 +142,12 @@ $(document).on('pageshow', '#savedReminder' ,function(){
 $(document).on('pageshow', '#addContact' ,function(){
 	$("#saveReminderButton").click(function() {
 		saveNewContact();
+	});
+});
+
+$(document).on('pageshow', '#addGroupContact' ,function(){
+	$("#saveReminderButton").click(function() {
+		saveGroupContact();
 	});
 });
 
