@@ -33,11 +33,19 @@ function setVariables() {
 		}
 }
 
-function loadContacts() {
+function loadKinContacts() {
 	var contacts = JSON.parse(localStorage.getItem('reminderList'));
 	$('#kinList').innerHTML = "";
 	for (i = 0; i < contacts.length; i++) {
 	$('#kinList').append('<li><a href="dataPage.html" class="ui-btn ui-btn-icon-right ui-icon-carat-r">' + contacts[i].firstName + " " + contacts[i].lastName + '</a></li>');
+	}
+}
+
+function loadRequestContacts() {
+	var contacts = JSON.parse(localStorage.getItem('reminderList'));
+	$('#requestList').innerHTML = "";
+	for (i = 0; i < contacts.length; i++) {
+	$('#requestList').append('<li><a href="mediaType.html" class="ui-btn ui-btn-icon-right ui-icon-carat-r">' + contacts[i].firstName + " " + contacts[i].lastName + '</a></li>');
 	}
 }
 
@@ -64,8 +72,8 @@ function saveInfo() {
     				return $(el).val();
 					}).get(),
 		active: 1
-	};
-	contacts.push(newReminder);
+	};push(newReminder);
+	contacts.
 	localStorage.setItem('reminderList', JSON.stringify(contacts));
 }
 
@@ -85,8 +93,12 @@ $(document).ready(function(){
 });
 
 $(document).on('pageshow', '#myKin' ,function(){
-		loadContacts();
+		loadKinContacts();
 });
+$(document).on('pageshow', '#sendRequest' ,function(){
+		loadRequestContacts();
+});
+
 
 $(document).on('pageshow', '#savedReminder' ,function(){
 		displaySavedContact();
