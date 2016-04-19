@@ -95,7 +95,6 @@ function saveSycedContact() {
 }
 
 function displaySavedContact() {
-	//alert("working!");
 	var contacts = JSON.parse(localStorage.reminderList);
 	var newContact = contacts[contacts.length - 1];
 	$("#contactInfo").append('<p><strong>First Name:</strong> ' + newContact.firstName + '</p>');
