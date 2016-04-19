@@ -90,8 +90,9 @@ function saveSycedContact() {
     				return $(el).val();
 					}).get(),
 		active: 1
-	};push(newReminder);
-	contacts.localStorage.setItem('reminderList', JSON.stringify(contacts));
+	};
+	contacts.push(newReminder);
+	localStorage.setItem('reminderList', JSON.stringify(contacts));
 }
 
 function displaySavedContact() {
