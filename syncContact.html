@@ -21,12 +21,49 @@
 
 	<div data-role="content">
 
-		<ul data-role="listview" data-inset="true">
+		<!-- <ul data-role="listview" data-inset="true">
 			<li><a href="createReminder.html">Bob Gajos</a></li>
 			<li><a href="createReminder.html">Bobette Amir</a></li>
 			<li><a href="createReminder.html">Bobby Krzysztof</a></li>
-		</ul>
-		</div>
+		</ul> -->
+		<form>
+
+			<div class="fieldcontain" data-role="controlgroup" id="selectSyncContact">
+				<legend>Select A Contact</legend>
+				<input type="radio" name="radio-choice-v-4a" id="radio-choice-v-4a" value="Bob Gajos" checked="checked">
+				<label for="radio-choice-v-4a">Bob Gajos</label>
+				<input type="radio" name="radio-choice-v-4b" id="radio-choice-v-4b" value="Bobette Amir">
+				<label for="radio-choice-v-4b">Bobette Amir</label>
+				<input type="radio" name="radio-choice-v-4c" id="radio-choice-v-4c" value="Bobby Krzysztof">
+				<label for="radio-choice-v-4c">Bobby Krzysztof</label>
+			<div>
+
+			<div class="fieldcontain" data-role="controlgroup" id="syncedContactFrequency">
+				<legend>How often do you want to communicate?</legend>
+				<input type="radio" name="frequency" id="radio-choice-v-1a" value="Once a day" checked="checked">
+				<label for="radio-choice-v-1a">Once a day</label>
+				<input type="radio" name="frequency" id="radio-choice-v-1b" value="Once a week">
+				<label for="radio-choice-v-1b">Once a week</label>
+				<input type="radio" name="frequency" id="radio-choice-v-1c" value="Once a month">
+				<label for="radio-choice-v-1c">Once a month</label>
+			</div>
+
+
+			<fieldset data-role="controlgroup">
+					<legend>Type of communication you want to share </legend>
+					<input type="checkbox" name="checkbox-v-3a" id="checkbox-v-3a">
+					<label for="checkbox-v-3a">Text</label>
+					<input type="checkbox" name="checkbox-v-3b" id="checkbox-v-3b">
+					<label for="checkbox-v-3b">Photo</label>
+					<input type="checkbox" name="checkbox-v-3c" id="checkbox-v-3c">
+					<label for="checkbox-v-3c">Music</label>
+			</fieldset>
+	</form>
+	<div class="fieldcontain" data-role="content">
+		<input type="submit" value="Next" id="syncContactButton">
+	</div>
+
+	</div>
 
 		 <div data-role="navbar" data-iconpos="top">
 				<ul>
@@ -36,7 +73,7 @@
 					<li><a href="activity.html" class="ui-btn" data-icon="grid">Activity</a></li>
 				</ul>
 			</div>
-		</div> 
+		</div>
 	<!-- /content -->
 </div><!-- /myKinpage -->
 

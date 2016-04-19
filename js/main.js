@@ -60,7 +60,7 @@ function addReminder(newReminder) {
 	localStorage.reminderList = contacts;
 }
 
-function saveInfo() {
+function saveNewContact() {
 	var contacts = JSON.parse(localStorage.reminderList);
 	var newReminder = {
 		reminderID: contacts.length,
@@ -75,6 +75,23 @@ function saveInfo() {
 	};push(newReminder);
 	contacts.
 	localStorage.setItem('reminderList', JSON.stringify(contacts));
+}
+
+function saveSycedContact() {
+	alert("hello");
+	var contacts = JSON.parse(localStorage.reminderList);
+	var newReminder = {
+		reminderID: contacts.length,
+		firstName: $("#selectSyncContact :radio:checked").val().split(" ")[0],
+		lastName: $("#selectSyncContact :radio:checked").val().split(" ")[1],
+		phoneNumber: "N/A",
+		frequency: $("#syncedContactFrequency :radio:checked").val(),
+		communicationType: $('input[type=checkbox]:checked').map(function(_, el) {
+    				return $(el).val();
+					}).get(),
+		active: 1
+	};push(newReminder);
+	contacts.localStorage.setItem('reminderList', JSON.stringify(contacts));
 }
 
 function displaySavedContact() {
@@ -106,6 +123,12 @@ $(document).on('pageshow', '#savedReminder' ,function(){
 
 $(document).on('pageshow', '#addContact' ,function(){
 	$("#saveReminderButton").click(function() {
-		saveInfo();
+		saveNewContact();
+	});
+});
+
+$(document).on('pageshow', '#syncContact' ,function(){
+	$("#syncContactButton").click(function() {
+		saveSyncedContact();
 	});
 });
