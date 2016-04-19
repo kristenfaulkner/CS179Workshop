@@ -72,8 +72,8 @@ function saveNewContact() {
     				return $(el).val();
 					}).get(),
 		active: 1
-	};push(newReminder);
-	contacts.
+	};
+	contacts.push(newReminder);
 	localStorage.setItem('reminderList', JSON.stringify(contacts));
 }
 
