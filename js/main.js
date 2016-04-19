@@ -35,7 +35,7 @@ function setVariables() {
 
 function loadKinContacts() {
 	var contacts = JSON.parse(localStorage.getItem('reminderList'));
-	$('#kinList').html("");
+	$('#kinList').innerHTML = "";
 	for (i = 0; i < contacts.length; i++) {
 		$('#kinList').append('<li><a href="dataPage.html" class="ui-btn ui-btn-icon-right ui-icon-carat-r">' + contacts[i].firstName + " " + contacts[i].lastName + '</a></li>');
 	}
@@ -72,9 +72,8 @@ function saveNewContact() {
     				return $(el).val();
 					}).get(),
 		active: 1
-	};
-	
-	contacts.push(newReminder);
+	};push(newReminder);
+	contacts.
 	localStorage.setItem('reminderList', JSON.stringify(contacts));
 }
 
@@ -83,10 +82,10 @@ function saveSycedContact() {
 	var contacts = JSON.parse(localStorage.reminderList);
 	var newReminder = {
 		reminderID: contacts.length,
-		firstName: $("#selectSyncContact :radio:checked").val().split(" ")[0],
-		lastName: $("#selectSyncContact :radio:checked").val().split(" ")[1],
+		firstName: $('input[name=radio-choice-v-4]:checked').val().split(" ")[0],
+		lastName: $('input[name=radio-choice-v-4]:checked').val().split(" ")[1],
 		phoneNumber: "N/A",
-		frequency: $("#syncedContactFrequency :radio:checked").val(),
+		frequency: $('input[name=frequency:checked').val(),
 		communicationType: $('input[type=checkbox]:checked').map(function(_, el) {
     				return $(el).val();
 					}).get(),
@@ -116,7 +115,6 @@ $(document).on('pageshow', '#myKin' ,function(){
 $(document).on('pageshow', '#sendRequest' ,function(){
 		loadRequestContacts();
 });
-
 
 $(document).on('pageshow', '#savedReminder' ,function(){
 		displaySavedContact();

@@ -20,24 +20,16 @@
 	</div>
 
 	<div data-role="content">
-
-		<!-- <ul data-role="listview" data-inset="true">
-			<li><a href="createReminder.html">Bob Gajos</a></li>
-			<li><a href="createReminder.html">Bobette Amir</a></li>
-			<li><a href="createReminder.html">Bobby Krzysztof</a></li>
-		</ul> -->
-		<form>
-
+		<form method="post" action="savedreminder.html">
 			<div class="fieldcontain" data-role="controlgroup" id="selectSyncContact">
 				<legend>Select A Contact</legend>
-				<input type="radio" name="radio-choice-v-4a" id="radio-choice-v-4a" value="Bob Gajos" checked="checked">
+				<input type="radio" name="radio-choice-v-4" id="radio-choice-v-4a" value="Bob Gajos" checked="checked">
 				<label for="radio-choice-v-4a">Bob Gajos</label>
-				<input type="radio" name="radio-choice-v-4b" id="radio-choice-v-4b" value="Bobette Amir">
+				<input type="radio" name="radio-choice-v-4" id="radio-choice-v-4b" value="Bobette Amir">
 				<label for="radio-choice-v-4b">Bobette Amir</label>
-				<input type="radio" name="radio-choice-v-4c" id="radio-choice-v-4c" value="Bobby Krzysztof">
+				<input type="radio" name="radio-choice-v-4" id="radio-choice-v-4c" value="Bobby Krzysztof">
 				<label for="radio-choice-v-4c">Bobby Krzysztof</label>
 			<div>
-
 			<div class="fieldcontain" data-role="controlgroup" id="syncedContactFrequency">
 				<legend>How often do you want to communicate?</legend>
 				<input type="radio" name="frequency" id="radio-choice-v-1a" value="Once a day" checked="checked">
@@ -47,8 +39,6 @@
 				<input type="radio" name="frequency" id="radio-choice-v-1c" value="Once a month">
 				<label for="radio-choice-v-1c">Once a month</label>
 			</div>
-
-
 			<fieldset data-role="controlgroup">
 					<legend>Type of communication you want to share </legend>
 					<input type="checkbox" name="checkbox-v-3a" id="checkbox-v-3a">
@@ -58,11 +48,10 @@
 					<input type="checkbox" name="checkbox-v-3c" id="checkbox-v-3c">
 					<label for="checkbox-v-3c">Music</label>
 			</fieldset>
-	</form>
-	<div class="fieldcontain" data-role="content">
-		<input type="submit" value="Next" id="syncContactButton">
-	</div>
-
+			<div class="fieldcontain" data-role="content">
+				<input type="submit" value="Next" id="syncContactButton">
+			</div>
+		</form>
 	</div>
 
 		 <div data-role="navbar" data-iconpos="top">
