@@ -1,4 +1,4 @@
-// ( function( $ ) {
+ // ( function( $ ) {
 // $( document ).ready(function() {
 // $('#cssmenu').prepend('<div id="menu-button">Menu</div>');
 // 	$('#cssmenu #menu-button').on('click', function(){
@@ -19,7 +19,7 @@ function setVariables() {
 			var reminderList = [
 				{reminderID: 0, firstName: "Kristen",  lastName: "Faulkner", frequency: "day",  communicationType: ["text, photo, article"], active: 1},
 				{reminderID: 1, firstName: "Amelia",   lastName: "Miller",   frequency: "day",  communicationType: ["text, video, article"], active: 1},
-				{reminderID: 2, firstName: "Xinchi",   lastName: "Dai",      frequency: "month",communicationType: ["text, photo, music"],   active: 1},
+				{reminderID: 2, firstName: "Xingchi",   lastName: "Dai",      frequency: "month",communicationType: ["text, photo, music"],   active: 1},
 				{reminderID: 3, firstName: "Joan",     lastName: "Zhang",    frequency: "week", communicationType: ["photo, music, video"],  active: 1},
 				{reminderID: 4, firstName: "Krzysztof",lastName: "Gajos",    frequency: "week", communicationType: ["text, photo, video"],   active: 1},
 				{reminderID: 5, firstName: "Ofra",     lastName: "Amir",     frequency: "month",communicationType: ["photo, music, video"],  active: 1},
@@ -180,6 +180,12 @@ $(document).on('pageshow', '#addContact' ,function(){
 
 $(document).on('pageshow', '#addGroupContact' ,function(){
 	$("#saveReminderButton").click(function() {
+		saveGroupContact();
+	});
+});
+
+$(document).on('pageshow', '#groupPrefs' ,function(){
+	$("#savegroupButton").click(function() {
 		saveGroupContact();
 	});
 });

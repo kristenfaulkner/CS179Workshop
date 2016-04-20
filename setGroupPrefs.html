@@ -22,84 +22,14 @@
 		<h1>New Reminder</h1>
 	</div>
 
-	<div data-role="content">
+	<div data-role="content" id = "groupPrefs">
 
 		<form method="post" action="myKin.html">
-			<ul data-role="listview" data-inset="true" data-shadow="false">
-				<li class="custom-li-last"><a href="syncContactsGroup.html">Sync with contacts</a></li>
-				<div data-role="collapsible">
-                            <h3>Input New Contacts</h3>
-                           <ul data-role="listview" data-theme="a">
-							<li>
-								<div class="fieldcontain">
-									<label for="groupname">Group Name</label>
-									<input type="text" name="groupname" id="groupname" value="" />
-								<div>
-							</li>
+				<div class="fieldcontain">
+					<label for="groupname">Group Name</label>
+					<input type="text" name="groupname" id="groupname" value="" />
+				<div>
 
-							<div id = "contact1" data-role="content">
-								<li>
-									<h4>Contact 1</h4>
-									<div class="fieldcontain">
-										<label for="fname">First Name</label>
-										<input type="text" name="fname" id="fname" value="" />
-									<div>
-								</li>
-								<li>
-									<div class="fieldcontain">
-									<label for="lname">Last Name</label>
-									<input type="text" name="lname" id="lname" value="" />
-									</div>
-								</li>
-								<li>
-									<div class="fieldcontain">
-									<label for="lname">Phone Number</label>
-									<input type="text" name="phoneNum" id="phoneNum" value="" />
-									</div>
-								</li>
-							</div>
-							<div id = "contact2" data-role="content">
-								<li>
-									<h4>Contact 2</h4>
-									<div class="fieldcontain">
-										<label for="fname">First Name</label>
-										<input type="text" name="fname" id="fname" value="" />
-									<div>
-								</li>
-								<li>
-									<div class="fieldcontain">
-									<label for="lname">Last Name</label>
-									<input type="text" name="lname" id="lname" value="" />
-									</div>
-								</li>
-								<li>
-									<div class="fieldcontain">
-									<label for="lname">Phone Number</label>
-									<input type="text" name="phoneNum" id="phoneNum" value="" />
-									</div>
-								</li>
-							</div>
-						<div id = "contact3" data-role="content">
-								<li>
-									<h4>Contact 3</h4>
-									<div class="fieldcontain">
-										<label for="fname">First Name</label>
-										<input type="text" name="fname" id="fname" value="" />
-									<div>
-								</li>
-								<li>
-									<div class="fieldcontain">
-									<label for="lname">Last Name</label>
-									<input type="text" name="lname" id="lname" value="" />
-									</div>
-								</li>
-								<li>
-									<div class="fieldcontain">
-									<label for="lname">Phone Number</label>
-									<input type="text" name="phoneNum" id="phoneNum" value="" />
-									</div>
-								</li>
-							</div>
 
                 	<div class="ui-content" data-role="controlgroup" id="newReminderFrequency">
 							<legend>How often do you want to communicate?</legend>
@@ -126,7 +56,7 @@
 					</div>
 
 					<div class="fieldcontain" data-role="content">
-						<input type="submit" value="Next" id="saveReminderButton">
+						<input type="submit" value="Save" id="savegroupButton">
 					</div>
 
 					</div>
