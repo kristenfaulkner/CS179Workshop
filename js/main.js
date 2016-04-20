@@ -27,6 +27,16 @@ function setVariables() {
 			];
 			localStorage.setItem('reminderList', JSON.stringify(reminderList));
 
+			// Here is the variable for activity page
+			var activity = [
+				{contents: "You sent a video request to Kristen"},
+				{contents: "You received a picture request from Joan"},
+				{contents: "You sent a picture request to Ofra"},
+				{contents: "You received a text from Ofra"}
+			];
+			localStorage.setItem('activityList',JSON.stringify(activity));
+
+
 		//  If local storage is not working, alert user
 		} else {
 			alert("Sorry, this app will not work because you do not have local storage!");
@@ -114,7 +124,6 @@ function saveSycedContact() {
 }
 
 function displaySavedContact() {
-	//alert("working!");
 	var contacts = JSON.parse(localStorage.reminderList);
 	var newContact = contacts[contacts.length - 1];
 	$("#contactInfo").append('<p><strong>First Name:</strong> ' + newContact.firstName + '</p>');
@@ -123,6 +132,30 @@ function displaySavedContact() {
 	$("#contactInfo").append('<p><strong>Frequency:</strong>  ' + newContact.frequency + '</p>');
 	$("#contactInfo").append('<p><strong>Type:</strong>  ' + newContact.communicationType + '</p>');
 }
+
+// This is the function to load the activity list
+function loadActivityList(){
+	var contents = JSON.parse(localStorage.getItem('activityList'));
+	$('#activityList').html("");
+	for (i = 0; i < contents.length; i++) {
+	$('#activityList').append('<li><a href="" class="ui-btn">'+contents[i].contents+'</a></li>');
+	}
+}
+
+function addActivity(){
+	//push the content into the localStorage
+	var contents = JSON.parse(localStorage.activityList);
+	var newActivity = [{
+		contents : "[new] You sent a text to Mom"}];
+	for (i=0; i<contents.length;i++){
+		newActivity.push(contents[i]);
+	}
+	
+	localStorage.setItem('activityList', JSON.stringify(newActivity));
+
+}
+
+
 
 $(document).ready(function(){
 		setVariables();
@@ -156,3 +189,11 @@ $(document).on('pageshow', '#syncContact' ,function(){
 		saveSyncedContact();
 	});
 });
+
+$(document).on('pageshow', '#activity' ,function(){
+	loadActivityList();
+});
+
+
+
+
