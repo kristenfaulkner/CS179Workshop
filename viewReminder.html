@@ -12,14 +12,6 @@
 	<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/main.js"></script>
-	<script> function toggleVideo(state) {
-    // if state == 'hide', hide. Else: show video
-    var div = document.getElementById("popupVid");
-    var iframe = div.getElementsByTagName("iframe")[0].contentWindow;
-    div.style.display = state == 'hide' ? 'none' : '';
-    func = state == 'hide' ? 'pauseVideo' : 'playVideo';
-    iframe.postMessage('{"event":"command","func":"' + func + '","args":""}', '*');
-    </script>
 }
 </head>
 <body>
@@ -37,8 +29,17 @@
 	<div data-role="content">
 
 	<a href="#popupBasic" class = "ui-btn" data-rel="popup">Open Popup</a>
-	<iframe width="420" height="315" src="http://www.youtube.com/embed/W9LJDwZOprY?enablejsapi=1"></iframe>
+	<center><iframe width="420" height="315" src="http://www.youtube.com/embed/W9LJDwZOprY?enablejsapi=1"></iframe></center>
 	 <a href="javascript:;" onClick="toggleVideo('hide');">close</a>
+
+	 <script> function toggleVideo(state) {
+    // if state == 'hide', hide. Else: show video
+    var div = document.getElementById("popupVid");
+    var iframe = div.getElementsByTagName("iframe")[0].contentWindow;
+    div.style.display = state == 'hide' ? 'none' : '';
+    func = state == 'hide' ? 'pauseVideo' : 'playVideo';
+    iframe.postMessage('{"event":"command","func":"' + func + '","args":""}', '*');
+    </script>
 
 
 	<div data-role="popup" id="popupBasic" data-transition="fade" data-theme = "b" data-overlay-theme = "a">
