@@ -186,7 +186,6 @@ $(document).on('pageshow', '#addGroupContact' ,function(){
 
 $(document).on('pageshow', '#groupPrefs' ,function(){
 	$("#savegroupButton").click(function() {
-		alert("hi");
 		saveGroupContact();
 	});
 });
