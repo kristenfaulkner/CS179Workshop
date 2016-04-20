@@ -105,14 +105,15 @@ function saveGroupContact() {
 	localStorage.setItem('reminderList', JSON.stringify(contacts));
 }
 
-function saveSycedContact() {
+function saveSyncedContact() {
 	var contacts = JSON.parse(localStorage.reminderList);
+	console.log("I made it here");
 	var newReminder = {
 		reminderID: contacts.length,
-		firstName: $('input[name=radio-choice-v-4]:checked').val().split(" ")[0],
-		lastName: $('input[name=radio-choice-v-4]:checked').val().split(" ")[1],
+		firstName: $("#selectSyncContact :radio:checked").val().split(" ")[0],
+		lastName: $("#selectSyncContact :radio:checked").val().split(" ")[1],
 		phoneNumber: "N/A",
-		frequency: $('input[name=frequency:checked').val(),
+		frequency: $("#syncedContactFrequency :radio:checked").val(),
 		communicationType: $('input[type=checkbox]:checked').map(function(_, el) {
     				return $(el).val();
 					}).get(),
@@ -185,7 +186,7 @@ $(document).on('pageshow', '#addGroupContact' ,function(){
 
 $(document).on('pageshow', '#syncContact' ,function(){
 	$("#syncContactButton").click(function() {
-		console.log("hello!");
+		alert("hi");
 		saveSyncedContact();
 	});
 });
