@@ -9,6 +9,11 @@
 	<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/main.js"></script>
+	<!-- Include the compiled Ratchet CSS -->
+	<link href="css/ratchet.css" rel="stylesheet">
+
+	<!-- Include the compiled Ratchet JS -->
+	<script src="js/ratchet.js"></script>
 </head>
 <body>
 <!--- addContact page ------------------------------------------>
@@ -49,17 +54,17 @@
 									</div>
 								</li>
 							</div>
-							<div class="ui-content" data-role="controlgroup" id="newReminderFrequency">
-							<legend>How often do you want to communicate?</legend>
-							<input type="radio" name="frequency" id="radio-choice-v-2a" value="Once a day" checked="checked">
-							<label for="radio-choice-v-2a">Once a day</label>
-							<input type="radio" name="frequency" id="radio-choice-v-2b" value="Once a week">
-							<label for="radio-choice-v-2b">Once a week</label>
-							<input type="radio" name="frequency" id="radio-choice-v-2c" value="Once a month">
-							<label for="radio-choice-v-2c">Once a month</label>
-					</div>
+							<div class="fieldcontain" data-role="controlgroup" id="newReminderFrequency">
+								<legend>How often do you want to communicate?</legend>
+								<input type="radio" name="frequency" id="radio-choice-v-2a" value="Once a day" checked="checked">
+								<label for="radio-choice-v-2a">Once a day</label>
+								<input type="radio" name="frequency" id="radio-choice-v-2b" value="Once a week">
+								<label for="radio-choice-v-2b">Once a week</label>
+								<input type="radio" name="frequency" id="radio-choice-v-2c" value="Once a month">
+								<label for="radio-choice-v-2c">Once a month</label>
+							</div>
 
-					<div class="ui-content" data-role="controlgroup" id="newReminderType">
+					<div class="fieldcontain" data-role="controlgroup" id="newReminderType">
 							<legend>What type of communication you want to share?</legend>
 							<input type="checkbox" name="type[]" id="checkbox-v-2a" value="Text">
 							<label for="checkbox-v-2a">Text</label>
@@ -72,7 +77,6 @@
 							<input type="checkbox" name="type[]" id="checkbox-v-2e" value="Article">
 							<label for="checkbox-v-2e">Article</label>
 					</div>
-						
 						<div class="fieldcontain" data-role="content">
 							<input type="submit" value="Next" id="saveReminderButton">
 						</div>
@@ -88,13 +92,30 @@
 		</br>
 
 		<div data-role="navbar" data-iconpos="top">
+		<nav class="bar bar-tab">
+		  <a class="tab-item active" href="myKin.html" data-icon="user">
+		    <span class="tab-label">My Reminders</span>
+		  </a>
+		  <a class="tab-item" href="newReminderView1.html" data-icon="plus">
+		    <span class="tab-label">Add Reminders</span>
+		  </a>
+		  <a class="tab-item" href="sendRequest.html" data-icon="forward">
+		    <span class="tab-label">Send Request</span>
+		  </a>
+		  <a class="tab-item" href="activity.html" data-icon="grid">
+		    <span class="tab-label">Activity</span>
+		  </a>
+		</nav>
+	</div>
+
+		<!-- <div data-role="navbar" data-iconpos="top">
 			<ul>
 				<li><a href="myKin.html" class="ui-btn" data-icon="user">My Reminders</a></li>
 				<li><a href="newReminderView1.html" class="ui-btn" data-icon="plus">Add Reminders</a></li>
 				<li><a href="sendRequest.html" class="ui-btn" data-icon="forward">Send Request</a></li>
 				<li><a href="activity.html" class="ui-btn" data-icon="grid">Activity</a></li>
 			</ul>
-		</div>
+		</div> -->
 	</div><!-- /content -->
 
 </div><!-- /addContactpage -->

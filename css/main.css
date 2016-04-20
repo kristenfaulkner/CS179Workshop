@@ -16,6 +16,11 @@ html {
     line-height: 1.4;
 }
 
+.ui-page {
+  background: transparent url(http://weblir.com/wp-content/uploads/2014/10/background-e.jpg);
+  background-size: cover;
+}
+
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301

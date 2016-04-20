@@ -9,6 +9,12 @@
 	<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/main.js"></script>
+	<!-- Include the compiled Ratchet CSS -->
+	<link href="css/ratchet.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+
+	<!-- Include the compiled Ratchet JS -->
+	<script src="js/ratchet.js"></script>
 </head>
 <body>
 <!--- addContact page ------------------------------------------>
@@ -24,19 +30,35 @@
 	<div data-role="content">
 
 		<form method="post" action="createReminder.html">
-		
+
 		<a href="newReminderIndividual.html" class="ui-btn">Add an Individual</a>
 		<a href="newReminderGroup.html" class="ui-btn">Add a Group</a>
 		</br>
 
 		<div data-role="navbar" data-iconpos="top">
+		<nav class="bar bar-tab">
+		  <a class="tab-item active" href="myKin.html" data-icon="user">
+		    <span class="tab-label">My Reminders</span>
+		  </a>
+		  <a class="tab-item" href="newReminderView1.html" data-icon="plus">
+		    <span class="tab-label">Add Reminders</span>
+		  </a>
+		  <a class="tab-item" href="sendRequest.html" data-icon="forward">
+		    <span class="tab-label">Send Request</span>
+		  </a>
+		  <a class="tab-item" href="activity.html" data-icon="grid">
+		    <span class="tab-label">Activity</span>
+		  </a>
+		</nav>
+	</div>
+		<!-- <div data-role="navbar" data-iconpos="top">
 			<ul>
 				<li><a href="myKin.html" class="ui-btn" data-icon="user">My Reminders</a></li>
 				<li><a href="newReminderView1.html" class="ui-btn" data-icon="plus">Add Reminders</a></li>
 				<li><a href="sendRequest.html" class="ui-btn" data-icon="forward">Send Request</a></li>
 				<li><a href="activity.html" class="ui-btn" data-icon="grid">Activity</a></li>
 			</ul>
-		</div>
+		</div> -->
 	</div><!-- /content -->
 
 </div><!-- /addContactpage -->
