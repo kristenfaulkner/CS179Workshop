@@ -149,7 +149,7 @@ function addActivity(){
 	for (i=0; i<contents.length;i++){
 		newActivity.push(contents[i]);
 	}
-	
+
 	localStorage.setItem('activityList', JSON.stringify(newActivity));
 
 }
@@ -185,6 +185,7 @@ $(document).on('pageshow', '#addGroupContact' ,function(){
 
 $(document).on('pageshow', '#syncContact' ,function(){
 	$("#syncContactButton").click(function() {
+		console.log("hello!");
 		saveSyncedContact();
 	});
 });
@@ -192,7 +193,3 @@ $(document).on('pageshow', '#syncContact' ,function(){
 $(document).on('pageshow', '#activity' ,function(){
 	loadActivityList();
 });
-
-
-
-
