@@ -72,7 +72,7 @@ fieldset {
     padding: 0;
 }
 
-h1{
+div.logo{
     width:200px; /*width of your image*/
    height:100px; /*height of your image*/
    background-image:'logo.png';
