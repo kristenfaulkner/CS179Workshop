@@ -90,6 +90,7 @@ function saveNewContact() {
 
 function saveGroupContact() {
 	var contacts = JSON.parse(localStorage.reminderList);
+		console.log("I made it here");
 	var newReminder = {
 		reminderID: contacts.length,
 		firstName: $("#groupname").val(),
@@ -107,7 +108,6 @@ function saveGroupContact() {
 
 function saveSyncedContact() {
 	var contacts = JSON.parse(localStorage.reminderList);
-	console.log("I made it here");
 	var newReminder = {
 		reminderID: contacts.length,
 		firstName: $("#selectSyncContact :radio:checked").val().split(" ")[0],
@@ -186,13 +186,13 @@ $(document).on('pageshow', '#addGroupContact' ,function(){
 
 $(document).on('pageshow', '#groupPrefs' ,function(){
 	$("#savegroupButton").click(function() {
+		alert("hi");
 		saveGroupContact();
 	});
 });
 
 $(document).on('pageshow', '#syncContact' ,function(){
 	$("#syncContactButton").click(function() {
-		alert("hi");
 		saveSyncedContact();
 	});
 });
