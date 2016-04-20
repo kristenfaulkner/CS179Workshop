@@ -8,10 +8,11 @@
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 	<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/main.js"></script>
 </head>
 <body>
 <!--- My Kin page ------------------------------------------>
-<div data-role="page" id="myKin">
+<div data-role="page" id="activity">
 
 	<div data-role="header">
 		<!--Header -->
@@ -19,7 +20,10 @@
 	</div>
 
 	<div data-role="content">
-    <table data-role="table" class="ui-responsive" id="myTable">
+
+		<ul data-role="listview" data-inset="true" id="activityList">
+		</ul>
+   <!--  <table data-role="table" class="ui-responsive" id="myTable">
           <thead>
             <tr>
               <th data-priority="1">Contact</th>
@@ -48,16 +52,16 @@
               <td>April 6, 2016 8:59pm</td>
             </tr>
           </tbody>
-        </table>
+        </table> -->
 				
-        <a href="#popupBasic" class = "ui-btn" data-rel="popup">Test Popup</a>
+        <!-- <a href="#popupBasic" class = "ui-btn" data-rel="popup">Test Popup</a> -->
 
-	<div data-role="popup" id="popupBasic" data-transition="fade" data-theme = "b" data-overlay-theme = "a">
+	<!-- <div data-role="popup" id="popupBasic" data-transition="fade" data-theme = "b" data-overlay-theme = "a">
 		<p>Time to send your mom a text!<p>
 		<input type="text" name="fname" placeholder="Miss you! Mom!" class="textInput"></input>
-		<a href="#Reminder" data-role="button" data-inline="true" data-mini="true" onclick="clearValue()">Send </a>
+		<a href="#Reminder" data-role="button" data-inline="true" data-mini="true" onclick="addActivity()">Send </a>
 		<a href="#Reminder" data-role="button" data-inline="true" data-theme="b" data-mini="true" onclick="clearValue()">Later</a>
-	</div>
+	</div> -->
 
 	</div>
 	<!-- /content -->

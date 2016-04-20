@@ -27,6 +27,16 @@ function setVariables() {
 			];
 			localStorage.setItem('reminderList', JSON.stringify(reminderList));
 
+			// Here is the variable for activity page
+			var activity = [
+				{contents: "You sent a video request to Kristen"},
+				{contents: "You received a picture request from Joan"},
+				{contents: "You sent a picture request to Ofra"},
+				{contents: "You received a text from Ofra"}
+			];
+			localStorage.setItem('activityList',JSON.stringify(activity));
+
+
 		//  If local storage is not working, alert user
 		} else {
 			alert("Sorry, this app will not work because you do not have local storage!");
@@ -35,7 +45,7 @@ function setVariables() {
 
 function loadKinContacts() {
 	var contacts = JSON.parse(localStorage.getItem('reminderList'));
-	$('#kinList').innerHTML = "";
+	$('#kinList').html("");
 	for (i = 0; i < contacts.length; i++) {
 		$('#kinList').append('<li><a href="dataPage.html" class="ui-btn ui-btn-icon-right ui-icon-carat-r">' + contacts[i].firstName + " " + contacts[i].lastName + '</a></li>');
 	}
@@ -77,6 +87,24 @@ function saveNewContact() {
 	localStorage.setItem('reminderList', JSON.stringify(contacts));
 }
 
+
+function saveGroupContact() {
+	var contacts = JSON.parse(localStorage.reminderList);
+	var newReminder = {
+		reminderID: contacts.length,
+		firstName: $("#groupname").val(),
+		lastName: "",
+		phoneNumber: "N/A",
+		frequency: $("#newReminderFrequency :radio:checked").val(),
+		communicationType: $('input[type=checkbox]:checked').map(function(_, el) {
+    				return $(el).val();
+					}).get(),
+		active: 1
+	};
+	contacts.push(newReminder);
+	localStorage.setItem('reminderList', JSON.stringify(contacts));
+}
+
 function saveSycedContact() {
 	var contacts = JSON.parse(localStorage.reminderList);
 	var newReminder = {
@@ -104,6 +132,30 @@ function displaySavedContact() {
 	$("#contactInfo").append('<p><strong>Type:</strong>  ' + newContact.communicationType + '</p>');
 }
 
+// This is the function to load the activity list
+function loadActivityList(){
+	var contents = JSON.parse(localStorage.getItem('activityList'));
+	$('#activityList').html("");
+	for (i = 0; i < contents.length; i++) {
+	$('#activityList').append('<li><a href="" class="ui-btn">'+contents[i].contents+'</a></li>');
+	}
+}
+
+function addActivity(){
+	//push the content into the localStorage
+	var contents = JSON.parse(localStorage.activityList);
+	var newActivity = [{
+		contents : "[new] You sent a text to Mom"}];
+	for (i=0; i<contents.length;i++){
+		newActivity.push(contents[i]);
+	}
+	
+	localStorage.setItem('activityList', JSON.stringify(newActivity));
+
+}
+
+
+
 $(document).ready(function(){
 		setVariables();
 });
@@ -125,8 +177,22 @@ $(document).on('pageshow', '#addContact' ,function(){
 	});
 });
 
+$(document).on('pageshow', '#addGroupContact' ,function(){
+	$("#saveReminderButton").click(function() {
+		saveGroupContact();
+	});
+});
+
 $(document).on('pageshow', '#syncContact' ,function(){
 	$("#syncContactButton").click(function() {
 		saveSyncedContact();
 	});
 });
+
+$(document).on('pageshow', '#activity' ,function(){
+	loadActivityList();
+});
+
+
+
+
