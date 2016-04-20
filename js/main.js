@@ -78,7 +78,6 @@ function saveNewContact() {
 }
 
 function saveSycedContact() {
-	alert("hello");
 	var contacts = JSON.parse(localStorage.reminderList);
 	var newReminder = {
 		reminderID: contacts.length,
