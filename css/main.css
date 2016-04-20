@@ -72,13 +72,6 @@ fieldset {
     padding: 0;
 }
 
-div.logo{
-    width:200px; /*width of your image*/
-   height:100px; /*height of your image*/
-   background-image:url('logo.png');
-   margin:0; /* If you want no margin */
-   padding:0; /*if your want to padding */
-}
 
 
 /*
