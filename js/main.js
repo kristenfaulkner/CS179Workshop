@@ -155,7 +155,7 @@ function addActivity(){
 
 }
 
-unction toggleVideo(state) {
+function toggleVideo(state) {
     // if state == 'hide', hide. Else: show video
     var div = document.getElementById("popupVid");
     var iframe = div.getElementsByTagName("iframe")[0].contentWindow;
