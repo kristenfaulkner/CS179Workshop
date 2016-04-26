@@ -168,6 +168,7 @@ $(document).on('pageshow', '#sendRequest' ,function(){
 });
 
 $(document).on('pageshow', '#savedReminder' ,function(){
+	  alert("hello");
 		displaySavedContact();
 });
 
