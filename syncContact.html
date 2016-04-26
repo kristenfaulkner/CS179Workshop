@@ -8,15 +8,10 @@
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 	<link rel="stylesheet" href="http://nativedroid.godesign.ch/demo/css/jquerymobile.nativedroid.css" />
   	<link rel="stylesheet" href="http://nativedroid.godesign.ch/demo/css/jquerymobile.nativedroid.light.css" id='jQMnDTheme' />
-  	<link rel="stylesheet" href="http://nativedroid.godesign.ch/demo/css/jquerymobile.nativedroid.color.green.css" id='jQMnDColor' />
+  	<link rel="stylesheet" href="http://nativedroid.godesign.ch/demo/css/jquerymobile.nativedroid.color.blue.css" id='jQMnDColor' />
 	<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	<link href="css/main.css" rel="stylesheet">
-	<!-- Include the compiled Ratchet CSS -->
-	<link href="css/ratchet.css" rel="stylesheet">
-
-	<!-- Include the compiled Ratchet JS -->
-	<script src="js/ratchet.js"></script>
 </head>
 <body>
 <!--- Sync Contact page ------------------------------------------>
@@ -24,12 +19,16 @@
 
 	<div data-role="header">
 		<!--Header -->
-		<a href="newReminderIndividual.html" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-carat-l">Back</a>
-		<h1>Select a Contact</h1>
+		<a href="newReminderIndividual.html" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-carat-l"></a>
+		<div align = "center">
+		<a href= "myKin.html">
+		<img src="logo.png" alt="Spokin" style="width:200px;height:100px;" ></a>
+		<h3>Select a Contact</h3>
+	</div>
 	</div>
 
 	<div data-role="content">
-		<form method="post" action="savedreminder.html">
+		<form method="post" action="myKin.html">
 			<div class="fieldcontain" data-role="controlgroup" id="selectSyncContact">
 				<legend>Select A Contact</legend>
 				<input type="radio" name="radio-choice-v-4" id="radio-choice-v-4a" value="Bob Gajos" checked="checked">
@@ -50,11 +49,11 @@
 			</div>
 			<fieldset data-role="controlgroup">
 					<legend>Type of communication you want to share </legend>
-					<input type="checkbox" name="checkbox-v-3a" id="checkbox-v-3a">
+					<input type="checkbox" name="type[]" id="checkbox-v-3a" value="text">
 					<label for="checkbox-v-3a">Text</label>
-					<input type="checkbox" name="checkbox-v-3b" id="checkbox-v-3b">
+					<input type="checkbox" name="type[]" id="checkbox-v-3b" value="photo">
 					<label for="checkbox-v-3b">Photo</label>
-					<input type="checkbox" name="checkbox-v-3c" id="checkbox-v-3c">
+					<input type="checkbox" name="type[]" id="checkbox-v-3c" value="music">
 					<label for="checkbox-v-3c">Music</label>
 			</fieldset>
 			<div class="fieldcontain" data-role="content">
@@ -63,7 +62,7 @@
 		</form>
 	</div>
 
-	<div data-role="navbar" data-iconpos="top">
+	<!-- <div data-role="navbar" data-iconpos="top">
 	<nav class="bar bar-tab">
 	  <a class="tab-item active" href="myKin.html" data-icon="user">
 	    <span class="tab-label">My Reminders</span>
@@ -78,16 +77,17 @@
 	    <span class="tab-label">Activity</span>
 	  </a>
 	</nav>
-</div>
-		 <!-- <div data-role="navbar" data-iconpos="top">
-				<ul>
-					<li><a href="myKin.html" class="ui-btn" data-icon="user">My Reminders</a></li>
-					<li><a href="newReminderView1.html" class="ui-btn" data-icon="plus">Add Reminders</a></li>
-					<li><a href="sendRequest.html" class="ui-btn" data-icon="forward">Send Request</a></li>
-					<li><a href="activity.html" class="ui-btn" data-icon="grid">Activity</a></li>
-				</ul>
-			</div>
-		</div> -->
+</div> -->
+		 <div data-role="navbar" data-iconpos="top">
+			<ul>
+				<li><a href="myKin.html" class="ui-btn" data-icon="user"> My </br> Reminders</a></li>
+				<li><a href="newReminderView1.html" class="ui-btn" data-icon="plus">Add </br> Reminders</a></li>
+				<li><a href="sendRequest.html" class="ui-btn" data-icon="forward">Send </br> Request</a></li>
+				<li><a href="activity.html" class="ui-btn" data-icon="grid">Recent </br> Activity</a></li>
+			</ul>
+		</div>
+	</div>
+
 	<!-- /content -->
 </div><!-- /syncContactpage -->
 

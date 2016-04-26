@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page Title</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="http://nativedroid.godesign.ch/demo/css/jquerymobile.nativedroid.css" />
+  	<link rel="stylesheet" href="http://nativedroid.godesign.ch/demo/css/jquerymobile.nativedroid.light.css" id='jQMnDTheme' />
+  	<link rel="stylesheet" href="http://nativedroid.godesign.ch/demo/css/jquerymobile.nativedroid.color.blue.css" id= 'jQMnDColor' />
+	<link href="css/main.css" rel="stylesheet">
+	<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/main.js"></script>
+</head>
+<body>
+<div data-role="page" id="groupPrefs" data-theme = "b" >
+
+	<div data-role="header">
+		<a href="newReminderView1.html" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-carat-l"></a>
+	<div align = "center">
+		<h3>New Reminder</h3>
+	</div>
+	</div>
+
+	<div data-role="content">
+
+		<form method="post" action="myKin.html">
+				<div class="fieldcontain">
+					<label for="groupname">Group Name</label>
+					<input type="text" name="groupname" id="groupname" value="" />
+				<div>
+
+
+                	<div class="ui-content" data-role="controlgroup" id="newReminderFrequency">
+							<legend>How often do you want to communicate?</legend>
+							<input type="radio" name="frequency" id="radio-choice-v-2a" value="Once a day" checked="checked">
+							<label for="radio-choice-v-2a">Once a day</label>
+							<input type="radio" name="frequency" id="radio-choice-v-2b" value="Once a week">
+							<label for="radio-choice-v-2b">Once a week</label>
+							<input type="radio" name="frequency" id="radio-choice-v-2c" value="Once a month">
+							<label for="radio-choice-v-2c">Once a month</label>
+					</div>
+
+					<div class="ui-content" data-role="controlgroup" id="newReminderType">
+							<legend>What type of communication you want to share?</legend>
+							<input type="checkbox" name="type[]" id="checkbox-v-2a" value="Text">
+							<label for="checkbox-v-2a">Text</label>
+							<input type="checkbox" name="type[]" id="checkbox-v-2b" value="Photo">
+							<label for="checkbox-v-2b">Photo</label>
+							<input type="checkbox" name="type[]" id="checkbox-v-2c" value="Music">
+							<label for="checkbox-v-2c">Music</label>
+							<input type="checkbox" name="type[]" id="checkbox-v-2d" value="Video">
+							<label for="checkbox-v-2d">Video</label>
+							<input type="checkbox" name="type[]" id="checkbox-v-2e" value="Article">
+							<label for="checkbox-v-2e">Article</label>
+					</div>
+
+					<div class="fieldcontain" data-role="content">
+						<input type="submit" value="Save" id="savegroupButton">
+					</div>
+			</form>
+		</div>
+
+		</br>
+	
+		<div data-role="navbar" data-iconpos="top">
+			<ul>
+				<li><a href="myKin.html" class="ui-btn" data-icon="user">My Reminders</a></li>
+				<li><a href="newReminderView1.html" class="ui-btn" data-icon="plus">Add Reminders</a></li>
+				<li><a href="sendRequest.html" class="ui-btn" data-icon="forward">Send Request</a></li>
+				<li><a href="activity.html" class="ui-btn" data-icon="grid">Activity</a></li>
+			</ul>
+		</div>
+	</div><!-- /content -->
+
+</div><!-- /addContactpage -->
+
+</body>
+</html>
