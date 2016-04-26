@@ -155,6 +155,13 @@ function addActivity(){
 
 }
 
+function toggleVideo(state) {
+    var div = document.getElementById("popupVid");
+    var iframe = div.getElementsByTagName("iframe")[0].contentWindow;
+    div.style.display = state == 'hide' ? 'none' : '';
+    func = state == 'hide' ? 'pauseVideo' : 'playVideo';
+    iframe.postMessage('{"event":"command","func":"' + func + '","args":""}', '*');
+}
 
 
 $(document).ready(function(){
@@ -198,4 +205,8 @@ $(document).on('pageshow', '#syncContact' ,function(){
 
 $(document).on('pageshow', '#activity' ,function(){
 	loadActivityList();
+});
+
+$(document).on('pageshow', '#activity' ,function(){
+	toggleVideo(state);
 });
