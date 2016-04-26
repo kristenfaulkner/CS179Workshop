@@ -30,10 +30,9 @@
 
 	<a href="#popupBasic" class = "ui-btn" data-rel="popup">Open Popup</a>
 	<center><iframe width="420" height="315" src="http://www.youtube.com/embed/W9LJDwZOprY?enablejsapi=1"></iframe></center>
-	 <a href="javascript:;" onClick="toggleVideo('hide');">close</a>
 
 
-	<div data-role="popup" id="popupBasic" data-transition="fade" data-theme = "b" data-overlay-theme = "a">
+	<div data-role="popup" id="popupBasic" data-transition="fade" data-theme = "b" data-overlay-theme = "a" script= "setTimeout(function() { alert("my message"); }, time);">
 		<p>Time to send your mom a text!<p>
 		<input type="text" name="fname" placeholder="Miss you! Mom!" class="textInput"></input>
 		<a href="#Reminder" data-role="button" data-inline="true" data-mini="true" onclick="clearValue()">Send </a>
