@@ -17,13 +17,14 @@ function setVariables() {
 
 			// If so, set local variables
 			var reminderList = [
-				{reminderID: 0, firstName: "Kristen",  lastName: "Faulkner", frequency: "day",  communicationType: ["text, photo, article"], active: 1},
-				{reminderID: 1, firstName: "Amelia",   lastName: "Miller",   frequency: "day",  communicationType: ["text, video, article"], active: 1},
-				{reminderID: 2, firstName: "Xingchi",   lastName: "Dai",      frequency: "month",communicationType: ["text, photo, music"],   active: 1},
-				{reminderID: 3, firstName: "Joan",     lastName: "Zhang",    frequency: "week", communicationType: ["photo, music, video"],  active: 1},
-				{reminderID: 4, firstName: "Krzysztof",lastName: "Gajos",    frequency: "week", communicationType: ["text, photo, video"],   active: 1},
-				{reminderID: 5, firstName: "Ofra",     lastName: "Amir",     frequency: "month",communicationType: ["photo, music, video"],  active: 1},
-				{reminderID: 6, firstName: "Rakesh",   lastName: "Khurana",  frequency: "week", communicationType: ["text, music, article"], active: 1}
+				// {reminderID: 0, firstName: "Kristen",  lastName: "Faulkner", frequency: "day",  communicationType: ["text, photo, article"], active: 1},
+				// {reminderID: 1, firstName: "Amelia",   lastName: "Miller",   frequency: "day",  communicationType: ["text, video, article"], active: 1},
+				// {reminderID: 2, firstName: "Xingchi",   lastName: "Dai",      frequency: "month",communicationType: ["text, photo, music"],   active: 1},
+				// {reminderID: 3, firstName: "Joan",     lastName: "Zhang",    frequency: "week", communicationType: ["photo, music, video"],  active: 1},
+				// {reminderID: 4, firstName: "Krzysztof",lastName: "Gajos",    frequency: "week", communicationType: ["text, photo, video"],   active: 1},
+				// {reminderID: 5, firstName: "Ofra",     lastName: "Amir",     frequency: "month",communicationType: ["photo, music, video"],  active: 1},
+				// {reminderID: 6, firstName: "Rakesh",   lastName: "Khurana",  frequency: "week", communicationType: ["text, music, article"], active: 1}
+				 {reminderID: 7, firstName: "Mom",  lastName: "", frequency: "day",  communicationType: ["text, photo, article"], active: 1}
 			];
 			localStorage.setItem('reminderList', JSON.stringify(reminderList));
 
@@ -47,7 +48,7 @@ function loadKinContacts() {
 	var contacts = JSON.parse(localStorage.getItem('reminderList'));
 	$('#kinList').html("");
 	if (contacts.length == 0) {
-		$('#kinList').append("<h1>You have no reminders yet. Add a reminder<a href='newReminderView1.html'>here</a>");
+		$('#kinList').append("<h3 style='text-align:center;'>You currently have no reminders. Add a reminder <a href='newReminderView1.html'>here</a></h3>");
 	} else {
 		for (i = 0; i < contacts.length; i++) {
 			$('#kinList').append('<li><a href="dataPage.html" class="ui-btn ui-btn-icon-right ui-icon-carat-r">' + contacts[i].firstName + " " + contacts[i].lastName + '</a></li>');
@@ -59,7 +60,7 @@ function loadRequestContacts() {
 	var contacts = JSON.parse(localStorage.getItem('reminderList'));
 	$('#requestList').innerHTML = "";
 	for (i = 0; i < contacts.length; i++) {
-	$('#requestList').append('<li><a href="mediaType.html" class="ui-btn ui-btn-icon-right ui-icon-carat-r" onclick="pushActivity(this)">' + contacts[i].firstName + " " + contacts[i].lastName + '</a></li>');
+			$('#requestList').append('<li><a href="mediaType.html" class="ui-btn ui-btn-icon-right ui-icon-carat-r" onclick="pushActivity(this)">' + contacts[i].firstName + " " + contacts[i].lastName + '</a></li>');
 	}
 }
 
@@ -211,7 +212,6 @@ $(document).on('pageshow', '#sendRequest' ,function(){
 });
 
 $(document).on('pageshow', '#savedReminder' ,function(){
-	  alert("hello");
 		displaySavedContact();
 });
 
