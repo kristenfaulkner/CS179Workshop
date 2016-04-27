@@ -47,12 +47,8 @@ function setVariables() {
 function loadKinContacts() {
 	var contacts = JSON.parse(localStorage.getItem('reminderList'));
 	$('#kinList').html("");
-	if (contacts.length == 0) {
-		$('#kinList').append("<h3 style='text-align:center;'>You currently have no reminders. Add a reminder <a href='newReminderView1.html'>here</a></h3>");
-	} else {
-		for (i = 0; i < contacts.length; i++) {
-			$('#kinList').append('<li><a href="dataPage.html" class="ui-btn ui-btn-icon-right ui-icon-carat-r">' + contacts[i].firstName + " " + contacts[i].lastName + '</a></li>');
-		}
+	for (i = 0; i < contacts.length; i++) {
+		$('#kinList').append('<li><a href="dataPage.html" class="ui-btn ui-btn-icon-right ui-icon-carat-r">' + contacts[i].firstName + " " + contacts[i].lastName + '</a></li>');
 	}
 }
 
