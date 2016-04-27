@@ -29,10 +29,10 @@ function setVariables() {
 
 			// Here is the variable for activity page
 			var activity = [
-				{contents: "You sent a video request to Kristen"},
-				{contents: "You received a picture request from Joan"},
-				{contents: "You sent a picture request to Ofra"},
-				{contents: "You received a text from Ofra"}
+				{contents: "You sent a video request to Kristen on April 26, 2016  2:32pm"},
+				{contents: "You received a picture request from Joan on April 25, 2016  12:49pm"},
+				{contents: "You sent a picture request to Ofra on April 25, 2016  8:16pm"},
+				{contents: "You received a text from Ofra on April 23, 2016 4:47pm"}
 			];
 			localStorage.setItem('activityList',JSON.stringify(activity));
 
