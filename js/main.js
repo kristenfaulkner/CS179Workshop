@@ -46,8 +46,12 @@ function setVariables() {
 function loadKinContacts() {
 	var contacts = JSON.parse(localStorage.getItem('reminderList'));
 	$('#kinList').html("");
-	for (i = 0; i < contacts.length; i++) {
-		$('#kinList').append('<li><a href="dataPage.html" class="ui-btn ui-btn-icon-right ui-icon-carat-r">' + contacts[i].firstName + " " + contacts[i].lastName + '</a></li>');
+	if (contacts.length == 0) {
+		$('#kinList').append("<h1>You have no reminders yet. Add a reminder<a href='newReminderView1.html'>here</a>");
+	} else {
+		for (i = 0; i < contacts.length; i++) {
+			$('#kinList').append('<li><a href="dataPage.html" class="ui-btn ui-btn-icon-right ui-icon-carat-r">' + contacts[i].firstName + " " + contacts[i].lastName + '</a></li>');
+		}
 	}
 }
 
@@ -77,7 +81,7 @@ function pushActivity(ele){
 
 		}
 		// print thest two values into the console
-		
+
 		// Construct the string and push it to the localStroage
 		var result = "You sent a ".concat(new_activity.type," request to ",new_activity.name," on ",new_activity.month,"/",new_activity.date,"/",new_activity.year," ",new_activity.hour,":", new_activity.minute);
  		console.log(result);
@@ -87,7 +91,7 @@ function pushActivity(ele){
  		}
  		localStorage.setItem('activityList',JSON.stringify(new_act));
 	}
-	
+
 }
 
 function clearValue() {
