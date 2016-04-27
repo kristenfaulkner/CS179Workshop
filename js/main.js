@@ -85,7 +85,6 @@ function pushActivity(ele){
 
 		// Construct the string and push it to the localStroage
 		var result = "You sent a ".concat(new_activity.type," request to ",new_activity.name," on ",new_activity.month,"/",new_activity.date,"/",new_activity.year," ",new_activity.hour,":", new_activity.minute);
- 		console.log(result);
  		var new_act = [{contents: result}];
  		for (i=0; i<activities.length; i++){
  			new_act.push(activities[i]);
@@ -126,7 +125,6 @@ function saveNewContact() {
 
 function saveGroupContact() {
 	var contacts = JSON.parse(localStorage.reminderList);
-		console.log("I made it here");
 	var newReminder = {
 		reminderID: contacts.length,
 		firstName: $("#groupname").val(),
@@ -199,12 +197,12 @@ function toggleVideo(state) {
     iframe.postMessage('{"event":"command","func":"' + func + '","args":""}', '*');
 }
 
-function loadRecentRequest();
+function loadRecentRequest() {
 	var contacts = localStorage.getItem('reminderList');
 	length = contacts.length;
 	var firstName = contacts[length-1].firstName;
-("#requestSentConfirmationMessage").html("You have sent a request to " + firstname);
-});
+  console.log("You have sent a request to " + firstname);
+};
 
 $(document).ready(function(){
 		setVariables();
