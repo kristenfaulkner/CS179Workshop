@@ -17,13 +17,15 @@ function setVariables() {
 
 			// If so, set local variables
 			var reminderList = [
-				{reminderID: 0, firstName: "Kristen",  lastName: "Faulkner", frequency: "day",  communicationType: ["text, photo, article"], active: 1},
-				{reminderID: 1, firstName: "Amelia",   lastName: "Miller",   frequency: "day",  communicationType: ["text, video, article"], active: 1},
-				{reminderID: 2, firstName: "Xingchi",   lastName: "Dai",      frequency: "month",communicationType: ["text, photo, music"],   active: 1},
-				{reminderID: 3, firstName: "Joan",     lastName: "Zhang",    frequency: "week", communicationType: ["photo, music, video"],  active: 1},
-				{reminderID: 4, firstName: "Krzysztof",lastName: "Gajos",    frequency: "week", communicationType: ["text, photo, video"],   active: 1},
-				{reminderID: 5, firstName: "Ofra",     lastName: "Amir",     frequency: "month",communicationType: ["photo, music, video"],  active: 1},
-				{reminderID: 6, firstName: "Rakesh",   lastName: "Khurana",  frequency: "week", communicationType: ["text, music, article"], active: 1}
+				// {reminderID: 0, firstName: "Kristen",  lastName: "Faulkner", frequency: "day",  communicationType: ["text, photo, article"], active: 1},
+				// {reminderID: 1, firstName: "Amelia",   lastName: "Miller",   frequency: "day",  communicationType: ["text, video, article"], active: 1},
+				// {reminderID: 2, firstName: "Xingchi",   lastName: "Dai",      frequency: "month",communicationType: ["text, photo, music"],   active: 1},
+				// {reminderID: 3, firstName: "Joan",     lastName: "Zhang",    frequency: "week", communicationType: ["photo, music, video"],  active: 1},
+				// {reminderID: 4, firstName: "Krzysztof",lastName: "Gajos",    frequency: "week", communicationType: ["text, photo, video"],   active: 1},
+				// {reminderID: 5, firstName: "Ofra",     lastName: "Amir",     frequency: "month",communicationType: ["photo, music, video"],  active: 1},
+				// {reminderID: 6, firstName: "Rakesh",   lastName: "Khurana",  frequency: "week", communicationType: ["text, music, article"], active: 1}
+				 {reminderID: 7, firstName: "Mom",   lastName: "",  frequency: "day", communicationType: ["text, music, article"], active: 1}
+
 			];
 			localStorage.setItem('reminderList', JSON.stringify(reminderList));
 
@@ -77,7 +79,7 @@ function pushActivity(ele){
 
 		}
 		// print thest two values into the console
-		
+
 		// Construct the string and push it to the localStroage
 		var result = "You sent a ".concat(new_activity.type," request to ",new_activity.name," on ",new_activity.month,"/",new_activity.date,"/",new_activity.year," ",new_activity.hour,":", new_activity.minute);
  		console.log(result);
@@ -87,7 +89,7 @@ function pushActivity(ele){
  		}
  		localStorage.setItem('activityList',JSON.stringify(new_act));
 	}
-	
+
 }
 
 function clearValue() {
