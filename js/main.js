@@ -207,7 +207,3 @@ $(document).on('pageshow', '#syncContact' ,function(){
 $(document).on('pageshow', '#activity' ,function(){
 	loadActivityList();
 });
-
-$(document).on('pageshow', '#activity' ,function(){
-	toggleVideo(state);
-});
