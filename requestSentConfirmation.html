@@ -13,7 +13,17 @@
   	<link rel="stylesheet" href="http://nativedroid.godesign.ch/demo/css/jquerymobile.nativedroid.color.blue.css" id='jQMnDColor' />
 </head>
 <body>
-  <h3 style="text-align: center;">Your request has been sent!</h3>
+	<body>
+		<div data-role="page" id="requestSentConfirmation", data-theme = 'b'>
+	  <h3 style="text-align: center;" id="requestSentConfirmationMessage"></h3>
+		<div style="text-align: center;" id="requestInfo"></div>
+		<script>
+		var contacts = JSON.parse(localStorage.getItem('reminderList'));
+		var contact = contacts[contacts.length-1];
+		$("#requestSentConfirmationMessage").html("Your request has been sent to " + contact.firstName);
+		$("#requestInfo").append('<p><strong>Frequency: </strong>1x/' + contact.frequency + '</p>');
+		$("#requestInfo").append('<p><strong>Type:</strong>  ' + contact.communicationType + '</p>');
+	</script>
 	<br>
 	<br>
 	 <div data-role="navbar" data-iconpos="top" data-theme = 'b'>
