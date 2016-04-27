@@ -199,6 +199,12 @@ function toggleVideo(state) {
     iframe.postMessage('{"event":"command","func":"' + func + '","args":""}', '*');
 }
 
+function loadRecentRequest();
+	var contacts = localStorage.getItem('reminderList');
+	length = contacts.length;
+	var firstName = contacts[length-1].firstName;
+("#requestSentConfirmationMessage").html("You have sent a request to " + firstname);
+});
 
 $(document).ready(function(){
 		setVariables();
@@ -241,4 +247,8 @@ $(document).on('pageshow', '#syncContact' ,function(){
 
 $(document).on('pageshow', '#activity' ,function(){
 	loadActivityList();
+});
+
+$(document).on('pageshow', '#requestSentConfirmation' ,function(){
+	loadRecentRequest();
 });
