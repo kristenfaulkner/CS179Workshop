@@ -29,10 +29,10 @@ function setVariables() {
 
 			// Here is the variable for activity page
 			var activity = [
-				{contents: "You sent a video request to Kristen on April 26, 2016  2:32pm"},
-				{contents: "You received a picture request from Joan on April 25, 2016  12:49pm"},
-				{contents: "You sent a picture request to Ofra on April 25, 2016  8:16pm"},
-				{contents: "You received a text from Ofra on April 23, 2016 4:47pm"}
+				{contents: "You sent a video request to Kristen on 4/26/2016  2:32"},
+				{contents: "You received a picture request from Joan on 4/25/2016  12:49"},
+				{contents: "You sent a picture request to Ofra on 4/25/2016  8:16"},
+				{contents: "You received a text from Ofra on 4/23/2016 4:47"}
 			];
 			localStorage.setItem('activityList',JSON.stringify(activity));
 
@@ -55,8 +55,39 @@ function loadRequestContacts() {
 	var contacts = JSON.parse(localStorage.getItem('reminderList'));
 	$('#requestList').innerHTML = "";
 	for (i = 0; i < contacts.length; i++) {
-	$('#requestList').append('<li><a href="mediaType.html" class="ui-btn ui-btn-icon-right ui-icon-carat-r">' + contacts[i].firstName + " " + contacts[i].lastName + '</a></li>');
+	$('#requestList').append('<li><a href="mediaType.html" class="ui-btn ui-btn-icon-right ui-icon-carat-r" onclick="pushActivity(this)">' + contacts[i].firstName + " " + contacts[i].lastName + '</a></li>');
 	}
+}
+
+var activity_log = []
+function pushActivity(ele){
+	var activities = JSON.parse(localStorage.activityList);
+	//push the new string into the stack
+	activity_log.push(ele.innerHTML);
+	if(activity_log.length >= 2){
+		var d = new Date();
+		var new_activity = {
+			type : activity_log.pop(),
+			name : activity_log.pop(),
+			month: d.getMonth() + 1,
+			date: d.getDate(),
+			year: d.getFullYear(),
+			hour: d.getHours(),
+			minute: d.getMinutes(),
+
+		}
+		// print thest two values into the console
+		
+		// Construct the string and push it to the localStroage
+		var result = "You sent a ".concat(new_activity.type," request to ",new_activity.name," on ",new_activity.month,"/",new_activity.date,"/",new_activity.year," ",new_activity.hour,":", new_activity.minute);
+ 		console.log(result);
+ 		var new_act = [{contents: result}];
+ 		for (i=0; i<activities.length; i++){
+ 			new_act.push(activities[i]);
+ 		}
+ 		localStorage.setItem('activityList',JSON.stringify(new_act));
+	}
+	
 }
 
 function clearValue() {
